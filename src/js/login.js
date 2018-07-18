@@ -36,7 +36,7 @@ function ingresar() {
 function observador() {
   firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
-          //aparece(user);
+          // aparece(user);
           // User is signed in.
           let displayName = user.displayName;
           let email = user.email;
@@ -57,21 +57,34 @@ function observador() {
   });
 
 }
-
 observador();
-/*
-function aparece(user) {
-  let user = user;
-  let contenido = document.getElementById("contenido");
-  if(user.emailVerified){
-      contenido.innerHTML =
-      `
-  <p>Bienvenido</p>
 
-  <button onclick="cerrar()">Cerrar sesión</button>
-  `;
-  }
-}*/
+function aparece() {
+
+  let contenido = document.getElementById("contenido");
+  contenido.innerHTML =
+  `
+<p>Bienvenido</p>
+
+<button onclick="cerrar()">Cerrar sesión</button>
+`;
+  /*if(user.emailVerified){
+
+  }*/
+}
+
+
+// Se codea el login
+let provider = new firebase.auth.GoogleAuthProvider(); // Instancia del proveedor del servicio
+
+$('#login').click(function() {
+    firebase.auth()
+    .signInWithPopup(provider)
+    .then(function(result) {
+        console.log(result.user);
+        $('#login').hide();
+    });
+});
 
 function cerrar() {
   firebase.auth().signOut()

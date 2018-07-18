@@ -4,12 +4,14 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
+  <title>Count_on_me.app</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
-
+  <link rel="shortcut icon" href="../images/talk_tome.png">
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -28,25 +30,25 @@
 
 <body>
   <div class="container">
-    <nav class="navbar navbar-dark bg-dark justify-content-between">
-      <a class="navbar-brand">Count on me.app</a>
+    <nav class="navbar navbar-light" style="background-color:#F8BBD0;">
+      <a class="navbar-brand">Count On Me.app</a>
+      <!-- Navbar content -->
     </nav>
   </div>
-  <h4>Registro de Usuarios</h4>
-  <input id="email" type="email" placeholder="Ingresa un email" class="form-control mr-sm-2">
-  <input id="contrasena" type="password" placeholder="Ingresa una contraseña" class="form-control mr-sm-2">
-  <button onclick="registrar()"> Enviar </button>
+  <div class="container-login">
+    <h5>Registrate</h5>
+    <input id="email" type="email" placeholder="Ingresa un email" class="form-control mr-sm-2 mb-2">
+    <input id="contrasena" type="password" placeholder="Ingresa una contraseña" class="form-control mr-sm-2">
+    <a href="#" class="btn btn-secondary btn-sm mb-2" role="button" aria-pressed="true" onclick="registrar()">Registrar</a>
 
-  <h5>Ingreso de Usuarios</h5>
-  <input id="email2" type="email" placeholder="Ingresa un email" class="form-control mr-sm-2">
-  <input id="contrasena2" type="password" placeholder="Ingresa una contraseña" class="form-control mr-sm-2">
-  <button onclick="ingresar()">Acceder</button>
+    <h5>Iniciar Sesión</h5>
+    <input id="email2" type="email" placeholder="Ingresa email" class="form-control mr-sm-2 mb-2">
+    <input id="contrasena2" type="password" placeholder="Ingresa contraseña" class="form-control mr-sm-2">
+    <a href="index.html" class="btn btn-secondary btn-sm" role="button" aria-pressed="true" onclick="ingresar()">Ingresar</a>
 
-  <div id="contenido">
-
-    <p>Bienvenido</p>
-
+    <button id="login" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Inicia con Google</button>
   </div>
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -54,6 +56,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
     crossorigin="anonymous"></script>
+
   <script src="../js/login.js"></script>
 </body>
 
