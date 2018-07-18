@@ -1,3 +1,90 @@
+# DEFINICION DEL PRODUCTO
+
+**El embarazo en adolescentes es un fenómeno que ha cobrado importancia en los últimos años debido a que México ocupa el primer lugar en el tema, entre los países de la Organización para la Cooperación y el Desarrollo Económico (OCDE) con una tasa de fecundidad de 77 nacimientos por cada mil adolescentes de **15 a 19 años de edad**. **Asimismo, en México, 23% de las y los adolescentes inician su vida sexual entre los 12 y los 19 años**. De estos, 15% de los hombres y 33% de las mujeres no utilizaron ningún método anticonceptivo en su primera relación sexual. Es así que de acuerdo con estos datos, aproximadamente ocurren al año 340 mil nacimientos en mujeres menores de 19 años**.
+
+El embarazo en las y los adolescentes afecta negativamente la salud, la permanencia en la escuela, los ingresos presentes y futuros, el acceso a oportunidades recreativas, sociales y laborales especializadas y de calidad y el desarrollo humano. Además del embarazo, tener relaciones sexuales sin protección implica un riesgo permanente de adquirir una infección de transmisión sexual.
+
+**Es por ello que se ha decidido crear esta aplicacion movil  para la asesorar y apoyar a jovenes   aolescentes embarazadas , y brindar un espacio donde puedan tocar varios temas de su interes con personas experiemtadas y conocedoras del tema,ademas de que podran hablar con otras jovenes de su edad y compratir sus vivencias ,permitiendo asi crear un espacio de confianza y apoyo.**
+
+
+# BENCHMARK
+#### Para elaborar esta tabla de comparacion se tomo en cuenta las aplicaciones que existen sobre temas de educacion sexual para adolescentes.
+#### Haciendo una comparativa entre todas ellas Los resultados se muestran a continuacion :
+
+
+Nombre app mobile |           CREsI      |
+-------------     | ---------------------|
+Nombre app mobile |Cresi                 |
+Pais de Origen    |Argentina             |
+Selección Idiomas |si                    |
+Interactiva       |si                    |
+Intuitiva         |si                    |
+Gratuita          |si                    |
+Descargas         |5,000                 |
+Android           |si                    |
+Itunes            |no                    |
+Juego             |si                    |
+Edad Minima       |12                    | 
+
+Nombre app mobile |Se como Jose y Josefa |
+-------------     | ---------------------|
+Nombre app mobile |Se como Jose y Josefa |
+Pais de Origen    |Madrid España         |
+Selección Idiomas |Español               |
+Interactiva       |si                    |
+Intuitiva         |si                    |
+Gratuita          |si                    |
+Descargas         |1,000                 |
+Android           |si                    |
+Itunes            |no                    |
+Juego             |si                    |
+Edad Minima       |------                | 
+
+Nombre app mobile |No te adelantes       |
+-------------     | ---------------------|
+Nombre app mobile |No te adelantes       |
+Pais de Origen    |Baja California       |
+Selección Idiomas |Español               |
+Interactiva       |si                    |
+Intuitiva         |si                    |
+Gratuita          |si                    |
+Descargas         |-----                 |
+Android           |no                    |
+Itunes            |si                    |
+Juego             |si                    |
+Edad Minima       |------                | 
+
+Nombre app mobile |Sex Education         |
+-------------     | ---------------------|
+Nombre app mobile |Sex Education         |
+Pais de Origen    |----------            |
+Selección Idiomas |Español               |
+Interactiva       |si                    |
+Intuitiva         |si                    |
+Gratuita          |si                    |
+Descargas         |1,000                 |
+Android           |si                    |
+Itunes            |no                    |
+Juego             |si                    |
+Edad Minima       |17+                   | 
+
+# RESUMEN DE ENTREVISTAS DE USUARIO
+
+Se elaboro una entrevista para poder saber la opinion sobre este tema.
+Las Entrevistas se realizaron a mujeres de diferentes edades.Para asi abordar varios puntos de vista.
+
+(https://ana1563.typeform.com/to/mBtGLx)
+
+
+
+# PROTOTIPADO DE ALTA CALIDAD
+
+
+(https://marvelapp.com/183ef04g/screen/45664740)
+
+
+
+
 # Creando una Red Social
 
 ## Preámbulo
