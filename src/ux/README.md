@@ -142,20 +142,15 @@ puedan exteriorizar sus sentimientos y brindar apoyo a las adolescentes que atra
 Se realizó una encuesta a mujeres de distintas edades y estatus sociales, en la cual pudimos observar que el 40% de las mujeres encuestadas no conocen todas las ventajas y desventajas de los métodos anticonceptivos; el 60% opina que la vida sexual en adolescentes inicia entre los 15 y 17 años; el 45% piensa que las relaciones sexuales entre adolescentes es por la curiosidad de saber que es y como se siente; el 65% considera que el embarazo en la adolescente es debido a la mala educación sexual; el 45% opina que las consecuencias del embarazo en adolescentes es la deserción escolar; y finalmente el 85% de las mujeres encuestadas consideran que las jóvenes embarazadas no cuentan con el apoyo suficiente.
 
 ### Encuesta
-encuesta0
-(C:\SPRINTS/SPRINTS GITHUB/cdmx-2018-06-bc-core-am-social-network/fotos/encuesta0.jpeg)
+![encuesta0](../fotos/encuesta0.jpg)
 
-encuesta1
-(C:\SPRINTS/SPRINTS GITHUB/cdmx-2018-06-bc-core-am-social-network/fotos/encuesta1.jpeg)
+![encuesta1](../fotos/encuesta1.jpg)
 
-encuesta2
-(C:\SPRINTS/SPRINTS GITHUB/cdmx-2018-06-bc-core-am-social-network/fotos/encuesta2.jpeg)
+![encuesta2](../fotos/encuesta2.jpg)
 
-encuesta3
-(C:\SPRINTS/SPRINTS GITHUB/cdmx-2018-06-bc-core-am-social-network/fotos/encuesta3.jpeg)
+![encuesta3](../fotos/encuesta3.jpg)
 
-encuesta4
-(C:\SPRINTS/SPRINTS GITHUB/cdmx-2018-06-bc-core-am-social-network/fotos/encuesta4.jpeg)
+![encuesta4](../fotos/encuesta4.jpg)
 
 ### Estadística de adolescentes embarazadas
 Nos dimos a la tarea de investigar acerca del embarazo en adolescentes, y pudimos notar que es un problema recurrente y que cada año el porcentaje de embarazo precoz aumenta.
@@ -169,16 +164,14 @@ quedar embarazada (17.4%), no conocía los métodos, no sabía dónde obtenerlos
 usarlos (17.1%) y 12.7% declaró otras razones.
 
 La estadística muestra lo siguiente:
-INEGI
-(C:\SPRINTS/SPRINTS GITHUB/cdmx-2018-06-bc-core-am-social-network/fotos/INEGI.jpeg)
+![INEGI](../fotos/INEGI.jpg)
 
 Diferenciando por edad, las adolescentes sexualmente activas que en su mayoría no utilizan
 algún método anticonceptivo son las de 15 y 16 años (57.8% y 49.2% respectivamente). A
 partir de los 17 años el uso de métodos anticonceptivos se incrementa, siendo las
 adolescentes de 18 y 19 años quienes más los utilizan (59.8% y 65.6% respectivamente).
 
-INEGI1
-(C:\SPRINTS/SPRINTS GITHUB/cdmx-2018-06-bc-core-am-social-network/fotos/INEGI1.jpeg)
+![INEGI1](../fotos/INEGI1.jpg)
 
 Fue por esta razón que tomamos la decisión de crear una Red Social para las adolescentes que necesitan apoyo en esta etapa de su vida, además de brindar la información de métodos anticonceptivos y temas de sexualidad.
 
