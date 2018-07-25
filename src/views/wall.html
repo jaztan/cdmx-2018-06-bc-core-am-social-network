@@ -14,9 +14,14 @@
 
 <body>
   <div class="container">
-    <h5>Bien</h5>
+    <h5>Haz una publicación</h5>
     <textarea id="paint-wall" placeholder="Escribe un post..." class="form-control mr-sm-2 mb-2"></textarea>
-    <button id="btn-post-public" class="btn btn-secondary btn-sm">Publicar</button>
+    <button id="btn-post-public" class="btn btn-secondary btn-sm" onclick="publicar();" >Publicar</button>
+  </div>
+  <div id="paint-post" class="card">
+      <div class="card-body">
+
+      </div>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>

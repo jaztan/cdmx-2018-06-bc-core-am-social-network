@@ -7,20 +7,14 @@ document.getElementById("btn-singin").addEventListener('click', event => {
   let password = document.getElementById("password").value;
   registrar(email, password);
 
-})
-
+});
 
 const registrar = (email, password) => {
-
-
-
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then(result => {
-
       verificar();
-
     })
     .catch(error => {
       // Handle Errors here.
@@ -52,8 +46,8 @@ const ingresar = () => {
       location.href = "../views/wall.html";
     })
     .catch(error => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      let errorCode = error.code;
+      let errorMessage = error.message;
       //console.log(errorCode);
       //console.log(errorMessage);
       // ...
@@ -110,7 +104,7 @@ $("#login").click(function () {
     });
 });
 
-const cerrar =()=> {
+const cerrar = () => {
   firebase
     .auth()
     .signOut()
@@ -122,7 +116,7 @@ const cerrar =()=> {
     });
 }
 
-function verificar() {
+const verificar = () => {
   let user = firebase.auth().currentUser;
 
   user
