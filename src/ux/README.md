@@ -15,6 +15,8 @@
 Audio de la entrevista con nuestro cliente, primer contacto:
  [Propuesta ante cliente](https://drive.google.com/drive/folders/18EQK_W0VwR8XwphCerMWz2ONYNA98P0K?usp=sharing)
 
+ Nuestra clienta emprededora
+
  Es importante mencionar que las redes sociales han tenido un gran impacto en la sociedad en un ámbito global, y  la mayoría de los usuarios son específicamente jóvenes, recordemos que cada red social cumple cierta finalidad.
 Al crear una red social (CountOnMe.App) comunitaria de apoyo dirigida a mujeres sin importar edad o situación económica, se pretende crear un espacio de convivencia humana donde prevalece el trato igualitario y el respeto mutuo. Al compartir experiencias propias  o vivencias con personas que en su adolescencia tuvieron el proceso de un embarazo y lo que implicó en la vida de cada una, invitando a madres jóvenes a externar sus inquietudes o miedos que pudiera ser el caso de mujeres que temen a las represalias ante su familia, pareja, amigos o en su círculo social, sin limitar ese apoyo emocional sólo a las jóvenes, cualquiera que desee comunicar una inquietud tendrá este espacio.
 A continuación muestro algunas de las respuestas que obtuve al plantear la idea de esta red social ante determinadas preguntas:
