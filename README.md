@@ -1,4 +1,4 @@
-# CONTME
+# COUNTME
  
 
 México ocupa el primer lugar de embarazo adolescente según la Organización para la Cooperación y el Desarrollo Económico (OCDE).
@@ -25,13 +25,13 @@ La mayoria de adolescentes que decidieron ser madres ,solo cuentan con un nivel 
 
 Nosotros hemos visto el gran problema que tienen que afrontar las adolescentes embarazdas,y hemos decidido crear una solucion accesible para estas jovenes ; La solucion que nosotros ofrecemos es una red social para ellas ,donde podran encontrar lo que ellas necesitan:
 
-- **Respeto**Esto sera lo primero que caracterizara a esta red,ya que aunque exista diferencia de opinion debera ser respetada.
+- **Respeto** Esto sera lo primero que caracterizara a esta red,ya que aunque exista diferencia de opinion debera ser respetada.
 
 - **Apoyo emocional;** Al ser adolescentes y estar embarazdas es muy difícil que puedan hablar sobre su situación con algun familiar sin sentirse juzgadas.
  
 - **Alternativas;** Asesorandolas y dandoles a conocer las alternativas con las que cuentan.Proporcionandoles el nombre de Instituciones donde pueden obtener varios servicios segun los requieran.
  
-- **Comprension;**  La red estara apoyada por mujeres que compartiendo su experiencia podras aportar grandes lecciones.
+- **Comprension;** La red estara apoyada por mujeres que compartiendo su experiencia podras aportar grandes lecciones.
 
 - **Información;** Se les brindara todo tipo de informacion pero de una manera fácil de entender.
 
@@ -183,15 +183,15 @@ Se realizó una encuesta a mujeres de distintas edades y estatus sociales, en la
 
 ### Encuesta
 
-![encuesta0](/fotos/encuesta0.jpg)
+![encuesta0](/src/images/encuesta0.JPG)
 
-![encuesta1](/fotos/encuesta1.jpg)
+![encuesta1](/src/images/encuesta1.JPG)
 
-![encuesta2](/fotos/encuesta2.jpg)
+![encuesta2](/src/images/encuesta2.JPG)
 
-![encuesta3](/fotos/encuesta3.jpg)
+![encuesta3](/src/images/encuesta3.JPG)
 
-![encuesta4](/fotos/encuesta4.jpg)
+![encuesta4](/src/images/encuesta4.JPG)
 
 ### Estadística de adolescentes embarazadas
 
@@ -206,14 +206,14 @@ quedar embarazada (17.4%), no conocía los métodos, no sabía dónde obtenerlos
 usarlos (17.1%) y 12.7% declaró otras razones.
 
 La estadística muestra lo siguiente:
-![INEGI](/fotos/INEGI.JPG)
+![INEGI](/src/images/INEGI.JPG)
 
 Diferenciando por edad, las adolescentes sexualmente activas que en su mayoría no utilizan
 algún método anticonceptivo son las de 15 y 16 años (57.8% y 49.2% respectivamente). A
 partir de los 17 años el uso de métodos anticonceptivos se incrementa, siendo las
 adolescentes de 18 y 19 años quienes más los utilizan (59.8% y 65.6% respectivamente).
 
-![INEGI1](/fotos/INEGI1.JPG)
+![INEGI1](/src/images/INEGI1.JPG)
 
 **Fuentes de consulta.**
 

@@ -1,2 +1,0 @@
-# RED SOCIAL - Cuenta conmigo
-

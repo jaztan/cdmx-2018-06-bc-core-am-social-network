@@ -1,6 +1,88 @@
-initializeFirebase();
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCm7I3cvutJG8L4Sbt7BiK-VQdPdxk3i4Y",
+    authDomain: "count-on-me-476fd.firebaseapp.com",
+    databaseURL: "https://count-on-me-476fd.firebaseio.com",
+    projectId: "count-on-me-476fd",
+    storageBucket: "count-on-me-476fd.appspot.com",
+    messagingSenderId: "578346489088"
+  };
+  firebase.initializeApp(config);
 
-let db = firabese.firestore();
+
+let txtNickname = document.getElementById('nickname');
+let txtMensaje = document.getElementById('mensaje');
+let btnEnviar = document.getElementById('btnEnviar');
+let chatUl = document.getElementById('chatUl');
+
+btnEnviar.addEventListener("click", function() {
+    let nickname = txtNickname.value;
+    let mensaje = txtMensaje.value;
+    //let html = "<li><b>"+nombre+": </b>"+mensaje+"</li>";
+    //chatUl.innerHTML += html;
+    //console.log(nombre);
+
+    //con la funcion database se accede al servicio y se crea un objeto con los datos que queremos
+    //guardar en la base de datos
+    firebase.database().ref('chat').push({
+      nickname: nickname,
+      message: mensaje
+    })
+
+});
+
+firebase.database().ref('chat')
+.on('value', function(snapshot) {
+    let html = '';
+    snapshot.forEach(function (e) {
+        let element = e.val();
+        let nickname = element.nickname;
+        let mensaje = element.message;
+        html += "<p><b>"+nickname+": </b>"+mensaje+"</p>";
+
+    });
+    chatUl.innerHTML = html;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*initializeFirebase();
+
+let db = firebase.firestore();
 
 const publicar = () => {
   firabese.auth().onAuthStateChanged(user => {
@@ -55,4 +137,4 @@ const deletePost = (idPost) => {
       console.log('No se ha eliminado');
     })
 
-}
+}*/
