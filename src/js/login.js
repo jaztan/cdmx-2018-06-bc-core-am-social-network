@@ -146,10 +146,10 @@ let provider = new firebase.auth.FacebookAuthProvider();
 validacion(provider);
 });
 
-const validacion=(provider)=>{
+//const validacion=(provider)=>{
     firebase.auth().signInWithPopup(provider).then(function(result) {
       console.log(result);
-      location.href = "../views/wall.html";
+      window.location.assign("../views/wall.html");
        //location es un metodo
         var token = result.credential.accessToken;
         // The signed-in user info.
@@ -166,6 +166,6 @@ const validacion=(provider)=>{
         var credential = error.credential;
         // ...
       });
-}
+//}
    
 
