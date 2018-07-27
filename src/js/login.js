@@ -141,13 +141,14 @@ const btnFace=document.getElementById('btnFace');
 
 
 btnFace.addEventListener('click',function(e){
+  e.preventDefault();
 let provider = new firebase.auth.FacebookAuthProvider();
 validacion(provider);
 });
 
 const validacion=(provider)=>{
     firebase.auth().signInWithPopup(provider).then(function(result) {
-    
+      console.log(result);
       location.href = "../views/wall.html";
        //location es un metodo
         var token = result.credential.accessToken;
