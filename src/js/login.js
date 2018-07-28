@@ -169,13 +169,13 @@ validacion(provider);
 //}
    
 
-firebase.auth().languageCode = 'it';
+firebase.auth().languageCode = 'btnPhone';
 // To apply the default browser preference instead of explicitly setting it.
 // firebase.auth().useDeviceLanguage();
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('captcha');
 var phoneNumber = getPhoneNumberFromUserInput('phone');
 var appVerifier = window.recaptchaVerifier;
-firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+firebase.auth().signInWithPhoneNumber('phone', 'captcha')
     .then(function (confirmationResult) {
       // SMS sent. Prompt user to type the code from the message, then sign the
       // user in with confirmationResult.confirm(code).
