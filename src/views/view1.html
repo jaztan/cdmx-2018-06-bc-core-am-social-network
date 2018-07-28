@@ -32,7 +32,25 @@
     <button id="btn-loginaitor" class="btn btn-secondary btn-sm">Ingresar</button>
     <button id="login" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Inicia con Google</button>
    <button id="btnFace" class="btn btn-tertiary btn-sm" role="button" aria-pressed="true">Inicia con Facebook</button>
+   
   </div>
+
+  <fieldset>
+    <legend>Ingresa tu numero Celular </legend>
+
+    <label for="phone">Número Celular:</label>
+    <input type="tel" id="phone" name="phone"
+           placeholder="123-456-7890"
+           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+           required />
+    <span class="validity"></span>
+
+</fieldset>
+<button id="btnPhone" class="btn btn-quaternary btn-sm" role="button"
+   aria-pressed="true">Inicia con tu Número Celular</button>
+   <input id="captcha" type="text"placeholder="ingresa el codigo que te llego como sms" class="form-control mr-sm-2 mb-2">
+   <input id="widgetId" type="text"placeholder="comprobando el codigo de verificación" class="form-control mr-sm-2 mb-2">
+
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 
 
