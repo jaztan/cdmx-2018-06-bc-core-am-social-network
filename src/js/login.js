@@ -170,7 +170,7 @@ validacion(provider);
    
 
 
-/*btnPhone.addEventListener('click',function(e){
+btnPhone.addEventListener('click',function(e){
   e.preventDefault();
   let provider=new firebase.auth().languageCode = 'phone';
 console.log('phone');
@@ -196,4 +196,4 @@ confirmationResult.confirm(code).then(function (result) {
 }).catch(function (error) {
   // User couldn't sign in (bad verification code?)
   // ...
-});*/
+});
