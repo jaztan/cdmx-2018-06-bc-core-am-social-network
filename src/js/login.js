@@ -169,7 +169,11 @@ validacion(provider);
 //}
    
 
-firebase.auth().languageCode = 'btnPhone';
+
+btnPhone.addEventListener('click',function(e){
+  e.preventDefault();
+  let provider=new firebase.auth().languageCode = 'phone';
+console.log('phone');
 // To apply the default browser preference instead of explicitly setting it.
 // firebase.auth().useDeviceLanguage();
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('captcha');
