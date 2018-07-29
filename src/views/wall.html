@@ -1,33 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>CountMe.app</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-          crossorigin="anonymous">
-      
-      </head>
-<body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <h5><strong><em>Bienvenida a tu comunidad</em></strong></h5>
-  <form>
-    <div>
-      <label for="nickname">Nickname</label>
-      <input type="text" id="nickname">
-    </div>
-    <div>
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje"></textarea>
-    </div>
-    <button type="button" id="btnEnviar">Enviar</button>
-  </form>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <div id="chatUl">
+    <title>CountMe</title>
+  </head>
+  <body>
+  <div class="container">
+    <h1>¡Bienvenida a esta comunidad de apoyo!</h1>
+    <input type="text" id="mensaje" placeholder="mensaje" class="form-control my-3">
+    <button class="btn btn info" id="boton" onclick="enviar()">Enviar</button>
 
+    <table class="table my-3">
+      <thead>
+        <tr>
+          
+          <th scope="col">Mensaje</th>
+
+        </tr>
+      </thead>
+      <tbody id="tabla">
+
+      </tbody>
+    </table>
   </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQtype=""irst, then Popper.js, then Bootstrap JS -->
   <div
   class="fb-like"
   data-share="true"
@@ -41,8 +45,13 @@
 
 
 
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
 <script src="../js/wall.js"></script>
 </body>
 </html>

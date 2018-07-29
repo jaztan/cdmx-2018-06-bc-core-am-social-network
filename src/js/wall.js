@@ -1,49 +1,90 @@
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCm7I3cvutJG8L4Sbt7BiK-VQdPdxk3i4Y",
-    authDomain: "count-on-me-476fd.firebaseapp.com",
-    databaseURL: "https://count-on-me-476fd.firebaseio.com",
-    projectId: "count-on-me-476fd",
-    storageBucket: "count-on-me-476fd.appspot.com",
-    messagingSenderId: "578346489088"
-  };
-  firebase.initializeApp(config);
+// Initialize Firebase
+firebase.initializeApp({
+  apiKey: "AIzaSyCm7I3cvutJG8L4Sbt7BiK-VQdPdxk3i4Y",
+  authDomain: "count-on-me-476fd.firebaseapp.com",
+  projectId: "count-on-me-476fd"
+});
+
+// Initialize Cloud Firestore through Firebase
+var db = firebase.firestore();
+function enviar() {
+  var mensaje = document.getElementById('mensaje').value;
 
 
-let txtNickname = document.getElementById('nickname');
-let txtMensaje = document.getElementById('mensaje');
-let btnEnviar = document.getElementById('btnEnviar');
-let chatUl = document.getElementById('chatUl');
-
-btnEnviar.addEventListener("click", function() {
-    let nickname = txtNickname.value;
-    let mensaje = txtMensaje.value;
-    //let html = "<li><b>"+nombre+": </b>"+mensaje+"</li>";
-    //chatUl.innerHTML += html;
-    //console.log(nombre);
-
-    //con la funcion database se accede al servicio y se crea un objeto con los datos que queremos
-    //guardar en la base de datos
-    firebase.database().ref('chat').push({
-      nickname: nickname,
-      message: mensaje
+  db.collection("users").add({
+    first: mensaje,
+  })
+    .then(function (docRef) {
+      console.log("Document written with ID: ", docRef.id);
+      var mensaje = document.getElementById('mensaje').value = '';
     })
-
-});
-
-firebase.database().ref('chat')
-.on('value', function(snapshot) {
-    let html = '';
-    snapshot.forEach(function (e) {
-        let element = e.val();
-        let nickname = element.nickname;
-        let mensaje = element.message;
-        html += "<p><b>"+nickname+": </b>"+mensaje+"</p>";
-
+    .catch(function (error) {
+      console.error("Error adding document: ", error);
     });
-    chatUl.innerHTML = html;
+
+}
+
+var tabla = document.getElementById('tabla');
+db.collection("users").onSnapshot((querySnapshot) => {
+  tabla.innerHTML = ''; //con este inner se limpia la caja
+  querySnapshot.forEach((doc) => {
+    console.log(`${doc.id} => ${doc.data()}`);
+    tabla.innerHTML += `
+            <tr>
+            <td>${doc.data().first}</td>
+            <td><button class="btn btn-danger" onclick="eliminar('${doc.id}')">Eliminar</button></td>
+            <td><button class="btn btn-warning" onclick="editar('${doc.id}','${doc.data().first}')">Editar</button></td>
+            </tr>
+            `
+  });
 });
 
+//a esta función se le paso el parámetro de Id para que se pueda borrar el comentario con su respectivo deseado
+function eliminar(id) {
+  db.collection("users").doc(id).delete().then(function () {
+    console.log("Document successfully deleted!");
+  }).catch(function (error) {
+    console.error("Error removing document: ", error);
+  });
+}
+
+//con esta función se pueden editar el mensaje y se le pasan los parámetros de id y mensaje para redireccionar
+//el mensaje que se va a cambiar al input de mensaje
+
+function editar(id, mensaje) {
+
+  document.getElementById('mensaje').value = mensaje;
+  var boton = document.getElementById('boton');
+  boton.innerHTML = 'Editar'; //se cambia el nombre del boton por la función que se va a realizar
+
+  boton.onclick = function () {
+
+    var washingtonRef = db.collection("users").doc(id);
+    // Set the "capital" field of the city 'DC'
+    var mensaje = document.getElementById('mensaje').value;
+    //var apellido = document.getElementById('apellido').value;
+    // var fecha = document.getElementById('fecha').value;
+    return washingtonRef.update({
+      first: mensaje,
+      //last: apellido,
+      //born: fecha
+    })
+      .then(function () {
+        console.log("Document successfully updated!");
+        boton.innerHTML = 'Enviar'; //se regresa el nombre del boton como se tenia al inicio
+        document.getElementById('mensaje').value = ''; //se pone en blanco para que puedan ingresar otro comentario
+        //document.getElementById('apellido').value = '';
+        //document.getElementById('fecha').value = '';
+      })
+      .catch(function (error) {
+        // The document probably doesn't exist.
+        console.error("Error updating document: ", error);
+      });
+
+  }
+
+
+}
 
 
 
