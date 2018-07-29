@@ -1,4 +1,4 @@
-# Proyecto Red Social CountOnMe.App :computer:
+# Proyecto Red Social CountMe.App :computer:
 ## **Proceso de UX**
 
 ## Sketching de Diseño esperado o ideal (Baja fidelidad).
