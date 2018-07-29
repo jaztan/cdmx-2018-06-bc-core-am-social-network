@@ -8,3 +8,11 @@ window.initializeFirebase = () => {
     messagingSenderId: "578346489088"
   });
 };
+window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '289516981795849',
+          xfbml      : true,
+          version    : 'v3.1'
+        });
+        FB.AppEvents.logPageView();
+      };
