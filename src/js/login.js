@@ -168,14 +168,26 @@ validacion(provider);
       });
 //}
    
- (function(d, s, fb-root) {
+ /*(function(d, s, fb-root) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById()) return;
     js = d.createElement(s); js.id = fb-root;
     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
     fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
+  }(document, 'script', 'facebook-jssdk'));*/
+FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    console.log('tu estado es conectado con facebook'(response.status));
+    var uid = response.authResponse.userID;
+    var accessToken = response.authResponse.accessToken;
+  } else if (response.status === 'authorization_expired') {
+   console.log ('tu autorizacion ya expiro'(response.status));
+  } else if (response.status === 'not_authorized') {
+    console.log ('no has iniciado sesion con Facebook'(response.status));
+  /*} else {
+   console.log ('(response.status));
+  }*/
+ });
 
  
 </html>
