@@ -126,3 +126,13 @@ validacion(provider);
     });
 //}
 */
+
+window.fbAsyncInit = () => {
+        FB.init({
+          appId      : '289516981795849',
+          xfbml      : true,
+          version    : 'v3.1'
+        });
+        FB.AppEvents.logPageView();
+      };
+

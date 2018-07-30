@@ -1,25 +1,59 @@
-# Proyecto Red Social CountMe.App :computer:
+# COUNTME
+ 
+
+México ocupa el primer lugar de embarazo adolescente según la Organización para la Cooperación y el Desarrollo Económico (OCDE).
+
+Según esta organización uno de cada cinco embarazos es de mujeres que se encuentran entre los 15 y los 19 años.
+
+#### ¿Por qué los embarazos adolescentes son un problema? 
+
+**__El INEGI ha documentado que madres adolescentes con frecuencia se ven obligadas a dejar la escuela, con la consecuente desventaja que, al tener una escasa o nula educación formal, se reducen las oportunidades en materia de educación y empleo, lo que limita gradualmente sus oportunidades de desarrollo.__**
+
+Esto repercute tanto en la vida de la menor como en la vida del futuro hijo ya que se vera limitado al acceso de varios servicios basicos:como son servicios medicos,servicios alimenticios y servicios educativos.
+
+Ademas de que el INEGI reporta que en su mayoria las adolescentes que decicidieron ser madres en su mayoria son madres solteras.
+
+Ademas de que al ser madres solteras repercute en su vida social ,y las perjudica a nivel psicologico ya que tienen que lidiar con muchas opiniones desvalorizantes,y esto repercute en varios ambitos de su vida.
+
+La mayoria de adolescentes que decidieron ser madres ,solo cuentan con un nivel escolar máximo de secundaria,limitandolas en el sector laboral siendo asi que solo tienen  muy pocas opciones para generar ingresos ,las únicas opciones con las que cuentan son las siguientes:
+
+- **Trabajar en el sector informal; percibiendo un sueldo menor al minimo ya que sus horarios de trabajo no pueden cumplir los requerimientos estipulados por contrato.**
+
+- **Trabajar en el sector domestico;teniendo que trabajar mas tiempo para poder percibir el sueldo minimo,con la poca seguridad que el trabajo obtenido sea constante ya que este tipo de trabajo es variado y poco estable.**
+
+- **Algunas adolescentes no logran conseguir trabajo.**
+
+Nosotros hemos visto el gran problema que tienen que afrontar las adolescentes embarazdas,y hemos decidido crear una solucion accesible para estas jovenes ; La solucion que nosotros ofrecemos es una red social para ellas ,donde podran encontrar lo que ellas necesitan:
+
+- **Respeto** Esto sera lo primero que caracterizara a esta red,ya que aunque exista diferencia de opinion debera ser respetada.
+
+- **Apoyo emocional;** Al ser adolescentes y estar embarazdas es muy difícil que puedan hablar sobre su situación con algun familiar sin sentirse juzgadas.
+ 
+- **Alternativas;** Asesorandolas y dandoles a conocer las alternativas con las que cuentan.Proporcionandoles el nombre de Instituciones donde pueden obtener varios servicios segun los requieran.
+ 
+- **Comprension;** La red estara apoyada por mujeres que compartiendo su experiencia podras aportar grandes lecciones.
+
+- **Información;** Se les brindara todo tipo de informacion pero de una manera fácil de entender.
+
 ## **Proceso de UX**
 
 ## Sketching de Diseño esperado o ideal (Baja fidelidad).
 - Mobile first + Desktop
 
 #### Blanco y negro
-![Prototipo_blanco y negro](../images/prototipo_b&w.gif)
+![Prototipo_blanco y negro](/src/images/prototipo_b&w.gif)
 
 #### Probando con colores
-![Prototipo_blanco y negro](../images/prototipo_color.gif)
-
-
+![Prototipo_blanco y negro](/src/images/prototipo_color.gif)
 
 
 # DEFINICION DEL PRODUCTO
 
-**El embarazo en adolescentes es un fenómeno que ha cobrado importancia en los últimos años debido a que México ocupa el primer lugar en el tema, entre los países de la Organización para la Cooperación y el Desarrollo Económico (OCDE) con una tasa de fecundidad de 77 nacimientos por cada mil adolescentes de **15 a 19 años de edad**. **Asimismo, en México, 23% de las y los adolescentes inician su vida sexual entre los 12 y los 19 años**. De estos, 15% de los hombres y 33% de las mujeres no utilizaron ningún método anticonceptivo en su primera relación sexual. Es así que de acuerdo con estos datos, aproximadamente ocurren al año 340 mil nacimientos en mujeres menores de 19 años**.
+El embarazo en adolescentes es un fenómeno que ha cobrado importancia en los últimos años debido a que México ocupa el primer lugar en el tema, entre los países de la Organización para la Cooperación y el Desarrollo Económico (OCDE) con una tasa de fecundidad de 77 nacimientos por cada mil adolescentes de **15 a 19 años de edad**. **Asimismo, en México, 23% de las y los adolescentes inician su vida sexual entre los 12 y los 19 años**. De estos, 15% de los hombres y 33% de las mujeres no utilizaron ningún método anticonceptivo en su primera relación sexual. Es así que de acuerdo con estos datos, aproximadamente ocurren al año 340 mil nacimientos en mujeres menores de 19 años.
 
 El embarazo en las y los adolescentes afecta negativamente la salud, la permanencia en la escuela, los ingresos presentes y futuros, el acceso a oportunidades recreativas, sociales y laborales especializadas y de calidad y el desarrollo humano. Además del embarazo, tener relaciones sexuales sin protección implica un riesgo permanente de adquirir una infección de transmisión sexual.
 
-**Es por ello que se ha decidido crear esta aplicacion movil  para la asesorar y apoyar a jovenes   aolescentes embarazadas , y brindar un espacio donde puedan tocar varios temas de su interes con personas experiemtadas y conocedoras del tema,ademas de que podran hablar con otras jovenes de su edad y compratir sus vivencias ,permitiendo asi crear un espacio de confianza y apoyo.**
+Es por ello que se ha decidido crear esta aplicacion movil  para la asesorar y apoyar a jovenes   aolescentes embarazadas , y brindar un espacio donde puedan tocar varios temas de su interes con personas experiemtadas y conocedoras del tema,ademas de que podran hablar con otras jovenes de su edad y compratir sus vivencias ,permitiendo asi crear un espacio de confianza y apoyo.
 
 
 # BENCHMARK
@@ -96,8 +130,6 @@ Las Entrevistas se realizaron a mujeres de diferentes edades.Para asi abordar va
 Audio de la entrevista con nuestro cliente, primer contacto:
  [Propuesta ante cliente](https://drive.google.com/drive/folders/18EQK_W0VwR8XwphCerMWz2ONYNA98P0K?usp=sharing)
 
- Nuestra clienta emprededora
-
  Es importante mencionar que las redes sociales han tenido un gran impacto en la sociedad en un ámbito global, y  la mayoría de los usuarios son específicamente jóvenes, recordemos que cada red social cumple cierta finalidad.
 Al crear una red social (CountOnMe.App) comunitaria de apoyo dirigida a mujeres sin importar edad o situación económica, se pretende crear un espacio de convivencia humana donde prevalece el trato igualitario y el respeto mutuo. Al compartir experiencias propias  o vivencias con personas que en su adolescencia tuvieron el proceso de un embarazo y lo que implicó en la vida de cada una, invitando a madres jóvenes a externar sus inquietudes o miedos que pudiera ser el caso de mujeres que temen a las represalias ante su familia, pareja, amigos o en su círculo social, sin limitar ese apoyo emocional sólo a las jóvenes, cualquiera que desee comunicar una inquietud tendrá este espacio.
 A continuación muestro algunas de las respuestas que obtuve al plantear la idea de esta red social ante determinadas preguntas:
@@ -114,17 +146,20 @@ Segunda respuesta:
 
 
 ### Historia del usuario
+
 Yo como mujer, siendo madre soltera y conocer a más de una mujer en la misma situación, me gustaría formar parte de esta red social ya que cuando nos enteramos que estamos embarazadas nos encontrabamos sin una persona a quien poder acudir y contarle nuesta situación, no teniamos apoyo y no sabemos de que manera podemos decirle a nuestros padres que estabamos embarazadas. 
 
 Me gustaria poder apoyar a las jóvenes que estan pasando por la situación por la que yo pase, ya que puedo comprender la confusión y el miedo por el que atraviesan. Me hubiera gustado que en el momento en el que quede embarazada existiera una red social como esta, ya que habría sentido la tranquilidad y confianza de externar mis emociones con mujeres que tienen conocimiento del embarazo. 
 
 ### Principales usuarios de la Red Social
+
 Esta comunidad se penso para la interacción de las mujeres, su objetivo principal es ser una
 red de apoyo a las jóvenes adolescentes que estan embarazadas, ya que como bien se sabe enfrentar
 esta situación es díficil para las jóvenes ya que no saben como enfrentar el embarazo, ni saben
 con quien pueden acercarse para pedir consejos y encontrar el apoyo que necesitan.
 
 ### ¿Que problema resuelve el producto para los usuarios?
+
 El principal problema que resuelve nuestro producto, es brindar el espacio para que las jóvenes
 encuentren un lugar seguro donde puedan compartir sus inquietudes, de igual forma que encuentren el apoyo en mujeres que han pasado por la misma situación o bien por mujeres con hijos.
 
@@ -133,28 +168,33 @@ Si les interesa obtener información de métodos anticonceptivos y/o informació
 Dependiendo de los intereses, y si así lo requiere la persona también se proporciona la referencia para encontrar en lugares seguros y de confianza el apoyo psicologico, atención medica y orientación todo a traves de expertos en dichos temas.
 
 ### ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
+
 Los objetivos de los usuarios son encontrar un espacio donde poder exponer su situación y encontrar
 el apoyo y/o consejos en mujeres que tengan conocimiento de esas experiencias.
 
 ### ¿Cuáles son las principales funcionalidades del producto y cuál es su prioridad?
+
 La principal funcionalidad y prioridad del producto es la existencia de un espacio donde las mujeres
 puedan exteriorizar sus sentimientos y brindar apoyo a las adolescentes que atraviesan por un embarazo precoz.
 
 ### Opinion del público
+
 Se realizó una encuesta a mujeres de distintas edades y estatus sociales, en la cual pudimos observar que el 40% de las mujeres encuestadas no conocen todas las ventajas y desventajas de los métodos anticonceptivos; el 60% opina que la vida sexual en adolescentes inicia entre los 15 y 17 años; el 45% piensa que las relaciones sexuales entre adolescentes es por la curiosidad de saber que es y como se siente; el 65% considera que el embarazo en la adolescente es debido a la mala educación sexual; el 45% opina que las consecuencias del embarazo en adolescentes es la deserción escolar; y finalmente el 85% de las mujeres encuestadas consideran que las jóvenes embarazadas no cuentan con el apoyo suficiente.
 
 ### Encuesta
-![encuesta0](../fotos/encuesta0.jpg)
 
-![encuesta1](../fotos/encuesta1.jpg)
+![encuesta0](/src/images/encuesta0.JPG)
 
-![encuesta2](../fotos/encuesta2.jpg)
+![encuesta1](/src/images/encuesta1.JPG)
 
-![encuesta3](../fotos/encuesta3.jpg)
+![encuesta2](/src/images/encuesta2.JPG)
 
-![encuesta4](../fotos/encuesta4.jpg)
+![encuesta3](/src/images/encuesta3.JPG)
+
+![encuesta4](/src/images/encuesta4.JPG)
 
 ### Estadística de adolescentes embarazadas
+
 Nos dimos a la tarea de investigar acerca del embarazo en adolescentes, y pudimos notar que es un problema recurrente y que cada año el porcentaje de embarazo precoz aumenta.
 
 En la estadística que realizó INEGI en el 2017, menciona que de acuerdo con la ENADID 2014, una de cada tres (29.2%) mujeres adolescentes del grupo de 15 a 19 años ya inició su vida sexual y 16.4% declararon ser sexualmente activas.7 Asimismo 44.9% declaró que ella o su pareja no utilizaron algún método anticonceptivo en su primera relación sexual.
@@ -166,14 +206,18 @@ quedar embarazada (17.4%), no conocía los métodos, no sabía dónde obtenerlos
 usarlos (17.1%) y 12.7% declaró otras razones.
 
 La estadística muestra lo siguiente:
-![INEGI](../fotos/INEGI.jpg)
+![INEGI](/src/images/INEGI.JPG)
 
 Diferenciando por edad, las adolescentes sexualmente activas que en su mayoría no utilizan
 algún método anticonceptivo son las de 15 y 16 años (57.8% y 49.2% respectivamente). A
 partir de los 17 años el uso de métodos anticonceptivos se incrementa, siendo las
 adolescentes de 18 y 19 años quienes más los utilizan (59.8% y 65.6% respectivamente).
 
-![INEGI1](../fotos/INEGI1.jpg)
+![INEGI1](/src/images/INEGI1.JPG)
 
-Fue por esta razón que tomamos la decisión de crear una Red Social para las adolescentes que necesitan apoyo en esta etapa de su vida, además de brindar la información de métodos anticonceptivos y temas de sexualidad.
+**Fuentes de consulta.**
 
+**El universal:**(http://www.eluniversal.com.mx/nacion/sociedad/ocde-mexico-primer-lugar-de-embarazo-en-adolescentes)
+
+**Estadisticas de INEGI:**
+(http://www.inegi.org.mx/saladeprensa/aproposito/2018/madre2018_Nal.pdf)
