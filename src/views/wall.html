@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:url"           content="https://jaztan.github.io/cdmx-2018-06-bc-core-am-social-network/src/views/wall.html" />
+    <meta property="og:url"           content="https://jaztan.github.io/cdmx-2018-06-bc-core-am-social-network/src/views/view1.html" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="CountMe.app" />
     <meta property="og:description"   content="" />
@@ -18,6 +18,16 @@
   </head>
   <body>
   <div class="container">
+
+    <h5>Haz una publicación</h5>
+    <textarea id="paint-wall" placeholder="Escribe un post..." class="form-control mr-sm-2 mb-2"></textarea>
+    <button id="btn-post-public" class="btn btn-secondary btn-sm" onclick="publicar();" >Publicar</button>
+  </div>
+  <div id="paint-post" class="card">
+      <div class="card-body">
+
+      </div>
+
     <h1>¡Bienvenida a esta comunidad de apoyo!</h1>
     <input type="text" id="mensaje" placeholder="mensaje" class="form-control my-3">
     <button class="btn btn info" id="boton" onclick="enviar()">Enviar</button>
@@ -40,6 +50,7 @@
 
       </tbody>
     </table>
+
   </div>
 
 
