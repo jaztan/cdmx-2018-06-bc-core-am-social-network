@@ -7,21 +7,24 @@ document.getElementById("btn-singin").addEventListener('click', event => {
   let password = document.getElementById("password").value;
   registrar(email, password);
 
-});
+})
+
 
 const registrar = (email, password) => {
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then(result => {
+
       verificar();
+     // location.href = "../index.html";
     })
     .catch(error => {
       // Handle Errors here.
       let errorCode = error.code;
       let errorMessage = error.message;
-      //console.log(errorCode);
-      //console.log(errorMessage);
+      alert(errorCode);
+      alert(errorMessage);
       // ...
     });
 };
@@ -46,10 +49,10 @@ const ingresar = () => {
       location.href = "../views/wall.html";
     })
     .catch(error => {
-      let errorCode = error.code;
-      let errorMessage = error.message;
-      //console.log(errorCode);
-      //console.log(errorMessage);
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert(errorCode);
+      alert(errorMessage);
       // ...
     });
 };
@@ -83,11 +86,9 @@ const aparece = () => {
   let contenido = document.getElementById("contenido");
   contenido.innerHTML = `
 <p>Bienvenido</p>
-
 <button onclick="cerrar()">Cerrar sesión</button>
 `;
   /*if(user.emailVerified){
-
   }*/
 }
 
@@ -99,12 +100,13 @@ $("#login").click(function () {
     .auth()
     .signInWithPopup(provider)
     .then(function (result) {
+      location.href = "../views/wall.html";
       console.log(result.user);
       $("#login").hide();
     });
 });
 
-const cerrar = () => {
+const cerrar =()=> {
   firebase
     .auth()
     .signOut()
@@ -116,13 +118,13 @@ const cerrar = () => {
     });
 }
 
-const verificar = () => {
+function verificar() {
   let user = firebase.auth().currentUser;
 
   user
     .sendEmailVerification()
     .then(function () {
-      console.log("Enviando correo de verificación...");
+      alert("Enviando correo de verificación...");
       // Email sent.
     })
     .catch(function (error) {
@@ -130,3 +132,35 @@ const verificar = () => {
       // An error happened.
     });
 }
+/*
+const btnFace=document.getElementById('btnFace');
+
+
+btnFace.addEventListener('click',function(e){
+  e.preventDefault();
+let provider = new firebase.auth.FacebookAuthProvider();
+validacion(provider);
+});
+
+//const validacion=(provider)=>{
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      console.log(result);
+      window.location.assign("../views/wall.html");
+       //location es un metodo
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        console.log("Iniciando Sesion con Facebook")
+        // ...
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+//}
+*/
