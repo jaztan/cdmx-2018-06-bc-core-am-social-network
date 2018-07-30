@@ -169,7 +169,7 @@ validacion(provider);
     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));*/
-FB.getLoginStatus(function(response) {
+/*FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     console.log('tu estado es conectado con facebook'(response.status));
     var uid = response.authResponse.userID;
@@ -181,7 +181,7 @@ FB.getLoginStatus(function(response) {
   /*} else {
    console.log ('(response.status));
   }*/
- });
+ });*/
 
  
 </html>
