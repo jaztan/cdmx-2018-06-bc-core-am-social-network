@@ -4,8 +4,14 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Count_on_me.app</title>
+  <title>CountMe.app</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:url"           content="https://jaztan.github.io/cdmx-2018-06-bc-core-am-social-network/src/views/view1.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="CountMe.app" />
+  <meta property="og:description"   content="" />
+<!--  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" /> -->
+</head>
   <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
@@ -16,8 +22,8 @@
 
 <body>
   <div class="container">
-    <nav class="navbar navbar-light" style="background-color:#F8BBD0;">
-      <a class="navbar-brand">Count On Me.app</a>
+    <nav class="navbar navbar-light" style="background-color:#DCB4CA;">
+      <a class="navbar-brand">CountMe.app</a>
       <!-- Navbar content -->
     </nav>
   </div>
@@ -31,7 +37,28 @@
     <input id="password-two" type="password" placeholder="Ingresa contraseña" class="form-control mr-sm-2">
     <button id="btn-loginaitor" class="btn btn-secondary btn-sm">Ingresar</button>
     <button id="login" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Inicia con Google</button>
+   <button id="btnFace" class="btn btn-tertiary btn-sm" role="button" aria-pressed="true">Inicia con Facebook</button>
   </div>
+  
+   <!-- Load Facebook SDK for JavaScript 
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>-->
+
+  <!-- Your like button code -->
+  <div class="fb-like" 
+    data-href="https://jaztan.github.io/cdmx-2018-06-bc-core-am-social-network/src/views/wall.html" 
+    data-layout="standard" 
+    data-action="like" 
+    data-show-faces="true">
+  </div>
+
+</body>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 
 
@@ -39,6 +66,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
+   
   <script src="../js/firebase.js"></script>
   <script src="../js/login.js"></script>
 

@@ -1,497 +1,223 @@
-# Creando una Red Social
+# COUNTME
+ 
 
-## Preámbulo
+México ocupa el primer lugar de embarazo adolescente según la Organización para la Cooperación y el Desarrollo Económico (OCDE).
 
-Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
-sociales han invadido nuestras vidas. Las amamos u odiamos, y muchos no podemos
-vivir sin ellas.
+Según esta organización uno de cada cinco embarazos es de mujeres que se encuentran entre los 15 y los 19 años.
 
-Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
-en una ronda de financiamiento con inversionistas, se presentó una red social
-para químicos en la que los usuarios podían publicar artículos sobre sus
-investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
-de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
-más comentado.
-
-## Introducción
-
-Una emprendedora nos ha encargado crear una red social. No nos da mucho detalle
-sobre qué tipo de red social quiere, sólo nos dice que creemos la mejor que
-podamos, y que luego la convenzamos de lanzarla al mercado. Nos da ciertos temas
-en los que le gustaría invertir:
-
-* Alimentación
-* Feminismo
-* Educación
-* Salud
-* Energías Renovables
-
-## Objetivos
-
-El objetivo principal de aprendizaje de este proyecto es construir un sitio web
-[_responsive_](https://github.com/Laboratoria/curricula-js/tree/master/topics/css/02-responsive)
-con más de una vista (página), y en el que podamos leer y escribir datos.
-
-Algunos objetivos específicos:
-
-* Entender las necesidades de los usuarios para los que crearás el producto y
-  que ayudarás a resolver.
-* Poner en juego tu creatividad para generar ideas que lleven a una solución
-  original y valiosa del problema.
-* Cuentas con el apoyo de tus compañeras, debes trabajar en equipo buscando
-  _feedback_ constante.
-
-## Consideraciones generales
-
-Este proyecto se debe "resolver" en trios.
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6), HTML y CSS. En este proyecto **SÍ está permitido** usar librerías o
-frameworks, pero **no es obligatorio** :smiley:.
-
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
-
-## Parte obligatoria
-
-### General
-
-En este proyecto, hay un _boilerplate_ basico , sin configuración y una estructura recomendada de carpetas (Puedes modificar, agregar o quitar lo que creas necesario), puedes guiarte de los proyectos anteriores. Por lo tanto, los _tests_ y el _setup_ necesario para ejecutarlos serán hechos por ti misma. Recuerda, _todos los archivos estan vacios_  :smiley:.
-
-En tu  `README.md`, cuéntanos cómo pensaste y te acercaste a los usuarios,
-y cuál fue tu proceso para definir el producto final en términos de experiencia
-y de interfaz. Si tienes fotos de entrevistas, cuestionarios y/o
-sketches(bocetos) compártelos.
-
-### Responsive
-
-Debe verse bien en dispositivos de pantallas grandes
-(computadoras/es, laptops, etc.) y pequeñas (tablets, celulares, etc.). Te
-sugerimos Seguir la técnica de `mobile first` (más detalles sobre esta técnica
-al final).
-
-### Tests
-
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
-_lines_, y _branches_.
-
-### UI y comportamiento (User Interface / Interfaz de Usuario)
-
-La interfaz debe permitir lo siguiente:
-
-#### Creación de cuenta de usuario e inicio de sesión
-
-* Login con Firebase:
-  - Solamente para el login es obligatorio usar Firebase, no para las
-    publicaciones en el muro ni las demás funcionalidades, pare eso puedes
-    usar [`localStorage`](https://developer.mozilla.org/es/docs/Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web).
-  - Autenticación con Facebook - Google.
-* Validaciones:.
-  - No pueden haber usuarios repetidos.
-  - La cuenta de usuario debe ser un correo electrónico válido.
-  - Lo que se escriba en el campo(_input_) de contraseña debe ser secreto.
-* Comportamiento:
-  - Al enviarse un formulario de registro o inicio de sesión, debe validarse.
-  - En caso haya errores, el sistema debe mostrar mensajes de error para
-    ayudar al usuario a corregirlos.
-  - La aplicación solo permitirá el acceso a usuarios con cuentas válidas.
-  - Al recargar la aplicación, se debe verificar si el usuario está
-    logueado antes de mostrarle el contenido privado.
-* Perspectiva de interfaz:
-  ![Login](https://user-images.githubusercontent.com/9284690/40994765-c3cf9602-68c2-11e8-89ac-8254859b5ebb.png)
-
-#### Muro/timeline de la red social
-
-* Validaciones (debe tener al menos 8):
-  - Al apretar el botón de publicar, debe validar que exista contenido en el input.
-* Comportamiento:
-  - Debe poder publicar un post, imagen, post e imagen, etc.
-  - Poder poder like/Estrella (o similar) a una publicación.
-  - Debe poder llevar ó ver cuántos me like/Estrella (o similar) tiene una publicación.
-  - Debe poder eliminar un post/publicación específico.
-  - Debe pedir una confirmación antes de eliminar un post/publicación.
-  - Al darle click en el botón *editar*, debe poder cambiar el texto, imagen, post e imagen, o lo que contenga la publicación.
-    (se sugiere que el texto cambie a un input, permita editar el texto y que el
-    tenga un botón `editar` se convierta en `guardar`).
-  - Al editar solo debe poder editar sus propios post y **NO** los post de los demás usuarios.
-  - Al darle `guardar` debe regresar de vuelta a la forma que tenia antes la publicación
-    a un texto normal pero con la información editada.
-  - Al recargar la página debo de poder ver los textos editados y publicaciones
-    anteriores (persistencia).
-  - Debe poder agregar nuevos amigos
-  - Debe poder aceptar solicitudes de amigos
-  - Debe poder eliminar amigos
-  - Debe poder filtrar los posts sólo para mis amigos y para todo público.
-  - Debe poder publicar solo para mis amigos
-  - Debe poder publicar públicamente, visible para todos los usuarios de la red social.
-  - Debe poder enviar mensajes privados a mis amigos.
-* Perspectiva de interfaz:
-  ![Muro](https://user-images.githubusercontent.com/9284690/40994768-c52c3442-68c2-11e8-99a5-9e127e700dee.png)
-
-#### Otras consideraciones
-
-  - La aplicación **NO** debe poder dejar hacer publicaciones vacías de ningún tipo.
-  - El usuario debe poder agregar, editar y eliminar contenido de la red
-    social.
-  - El usuario debe poder definir la privacidad de lo que pública.
-  - Al editar contenido, el contenido editado se verá automáticamente,
-    inmediatamente después de guardar.
-  - Al recargar la página se deben poder ver los contenidos editados.
-
-Para armar la interfaz visual, utiliza como base alguna de estas guías de
-componentes:
-
-* [Guía Desktop 1](https://www.figma.com/file/F3aUqpHWOfZsEQifTPIleXo6/material-kit-free)
-* [Guía Desktop 2](https://www.figma.com/file/S39H0B1LOnaVICIUiApFTfoP/_Style-Guide---Desktop---Style-Guide)
-* [Guía Mobile 1](https://www.figma.com/file/00VTwmTNvLVaBLkxrMFbT8/Google-Material-Design)
-* [Guía Mobile 2](https://www.figma.com/file/O2Xraz3mraQHvevNsicMl91V/ejemplos-2)
-
-Personaliza estas guías con los colores y/o tipografías que creas convenientes.
-Recuerda que al hacer estas adaptaciones deberás seguir los fundamentos de
-_visual design_ como contraste, alineación, jerarquía, entre otros.
-
-## Implementación
-
-### Front end
-
-El corazón de este proyecto incluye:
-
-* Separar la manipulación del DOM de la lógica (Separación de responsabilidades).
-* Que el sitio sea responsive, ya dicho.
-* Alterar y persistir datos.  Los datos que agregues o modifiques deberán
-  persistir a lo largo de la aplicación, te recomendamos que uses
-  [`localStorage`](https://developer.mozilla.org/es/docs/Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web)
-  como primera opción para resolver este desafío, aun así, tú
-  puedes optar por la que se acomode más a tu equipo.
-
-Además, podrías agregar algunas tareas nuevas de acuerdo a tus decisiones:
-
-* Recuerda que puedes usar una librería y/o framework si así lo desea el equipo,
-  al navegar en internet te darás cuenta de que algunas de estas construyen un
-  **boilerplate** por ti (Si no quieres usar la estructura propuesta), tenlo presente al iniciar tu proyecto.
-* Recuerda que no hay un setup de **tests** definido, dependerá de
-  la estructura de tu proyecto también, pero algo que no debes de olvidar es
-  pensar en éstas pruebas, incluso te podrían ayudar a definir la estructura y nomenclatura de tu lógica.
-
-### UX
-
-Desde el punto de vista de UX, deberás:  
-
-* Hacer un _benchamark_ de las principales redes sociales.
-* Hacer al menos 2 o 3 entrevistas con usuarios.
-* Hacer un  prototipo de alta fidelidad.
-* Testear el prototipo con usuarios.
-* Asegurarte de que la implementación en código siga los lineamientos del
-  diseño.
-* Hacer sesiones de testing con el producto en HTML.
-
-### Ágil
-
-Vamos a dar un paso importante para seguir aprendiendo de Ágil. Te será de mucha
-ayuda para ir avanzando tu proyecto de forma incremental y no en cascada.
-
-Esta vez te pedimos que los ítems de tu Backlog de Producto estén escritos
-como [Historias de Usuario](http://jmbeas.es/guias/historias-de-usuario/).
-Esta es una técnica muy simple que te ayudará a:
-
-* Organizar el trabajo en función del valor que le aporta al usuario.
-* Poder publicar partes completas y utilizables del producto al final del
-  sprint.
-* Que el equipo trabaje de manera multidisciplinaria de manera natural.
-
-### Habilidades Blandas
-
-Trabajar en equipo es un gran desafío porque coordinarse no es una tarea fácil,
-y es más difícil entre tres que entre dos. Trata que tu equipo te entienda,
-facilitando siempre el diálogo en dentro del squad **Apoyate de "Minestrone e Issues en Github"**.
-
-Planifica enumerando las tareas y distribuyéndolas, considerando los
-recursos, las habilidades, y el tiempo del que dispones. Planifica de manera
-que te permita avanzar en los distintos aspectos del proyecto de forma paralela,
-teniendo un tablero donde puedas ver en qué está trabajando cada compañera.
-
-Entrega tu trabajo a tu equipo a tiempo y colabora con el objetivo
-final del proyecto, lo que puede implicar ayudar a los demás miembros del equipo
-con sus pendientes, con el fin de entregar una red social de calidad.
-
-**La división del trabajo debe permitir que todo el equipo
-practique el aprendizaje de todas las habilidades esperadas. No se dividan el
-trabajo como en una fábrica**
-
-Para conocer a los usuario para eso debes salir e investigar. Tienes que
-ejercitar tus habilidades de comunicación y toma de decisiones.
-Existen infinitas opciones, depende de ti el camino que escoges.
-Para que tu red social responda a las necesidades de sus usuarios, probablemente
-deberás adquirir nuevos conocimientos para implementar sus preferencias.
-
-Esta vez, haz _code review_(feedback de tu código) con **otro squad**, para
-que puedas mejorar el producto. Mientras más feedback reciban, mejor.
-
-Esperamos que valores y escuches los comentarios y críticas de los demás,
-rescatando aquellos aspectos que sirven para tu crecimiento. Entrega siempre
-tu opinión de manera constructiva, fundamentada y coherente, con el propósito
-de ayudar a tus compañeras. Estos comentarios los debes hacer de manera honesta,
-empática e inmediata.
-
-Finalmente, deberás presentar el proyecto que creaste, al usuario que escogiste
-y las necesidades que lograste resolver en este proceso. Como siempre, sabemos
-que presentar puede ser una tarea difícil, esperamos que tengas capacidad de
-síntesis y articules tus ideas con claridad para que logres mostrar tu trabajo
-y que los demás lo comprendan.
-
-## Hacker edition
-
-* Crear posts con imágenes
-* Reemplazar `localStorage`, ¿le has compartido tu red social a tus amigxs? Si
-  lo has hecho, te darás cuenta de que ellxs no pueden ver tus posts ni tú el de
-  ellxs. Esto es debido a que `localStorage` almacena los datos localmente
-  (en tu navegador) por lo que esos datos no se comparten. Para resolver esto
-  podrías implementar una base de datos pero el tiempo podría jugar en contra,
-  para ello existen algunos servicios como [Firebase](https://firebase.google.com/products/database/)
-  que te proveen soluciones rápidas a este problema y solo usando su SDK :scream:.
-
-## Entrega
-
-El proyecto será _entregado_ subiendo tu código a GitHub (`commit`/`push`) y la
-interfaz será desplegada usando GitHub pages u otro servicio de hosting que
-puedas haber encontrado en el camino.
-
-### Entregables
-
-#### 1) Definición del producto
-
-En el `README.md` cómo conociste el mercado de las redes sociales, cómo
-descubriste las necesidades de los usuarios, cómo llegaste  la definición final
-de tu producto. Es importante que detalles:
-
-* Cuáles son los elementos básicos que tiene una red social
-* Quiénes son los principales usuarios de producto
-* Qué problema resuelve el producto para estos usuarios
-* Cuáles son los objetivos de estos usuarios en relación con el producto
-* Cuáles son las principales funcionalidades del producto y cuál es su prioridad
-* Cómo verificaste que el producto les está resolviendo sus problemas
-* Cómo te asegurarás que estos usuarios usen este producto
-
-Para poder llegar a estas definiciones te recomendamos ver: benchmarks,
-entrevistas con usuarios y tests de usabilidad.
-
-#### 2) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
-
-Debes definir cuál será el flujo que seguirá el usuario dentro de tu producto y
-con eso deberás diseñar la Interfaz de Usuario (UI por sus siglas en inglés) de
-esta red social que siga este flujo. Para esto debes utilizar la herramienta de
-diseño visual de tu preferencia. Nosotros te recomendamos Figma dado que es una
-herramienta que funciona en el navegador y puedes crear una cuenta gratis. Sin
-embargo, eres libre de utilizar otros editores gráficos como Illustrator,
-Photoshop, PowerPoint, Keynote, etc.
-
-Este diseño debe representar la solución que se implementará finalmente en
-código.
-
-Tu diseño debe seguir los fundamentos de visual design, como: contraste,
-alineación, jerarquía, entre otros. Tip: revisa el contenido de UX de la unidad
-de visual design.
-
-#### 3) Implementación de la Interfaz de Usuario
-
-La idea para este producto es que el producto a desarrollar siga los
-lineamientos propuestos en el diseño de la interfaz de usuario. Asegúrate a lo
-largo de la implementación que los elementos propuestos están siendo
-implementados correctamente. (Hint: testing)
-
-## Evaluación
-
-### Tech
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| **JavaScript** | |
-| Estilo | 3
-| Nomenclatura/semántica | 3
-| Funciones/modularidad | 2
-| Estructuras de datos | 2
-| Tests | 2
-| **HTML** | |
-| Validación | 3
-| Estilo | 3
-| Semántica | 3
-| SEO | n/a
-| **CSS** | |
-| DRY | 3
-| Responsive | 3
-| **SCM** | |
-| Git | 3
-| GitHub | 3
-| **CS** | |
-| Lógica | 2
-| Arquitectura | 2
-| Patrones/paradigmas | n/a
-
-### UX
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| User Centricity | 3
-| Entrevistas | 2 |
-| Testing | 2
-| User Flow | 2
-| Jerarquía | 3
-| Alineación | 3
-| Contraste | 3
-| Color | 3
-| Tipografía | 3
-
-### Habilidades Blandas
-
-Para este proyecto esperamos que ya hayas alcanzado el nivel 3 en todas tus
-habilidades blandas. Te aconsejamos revisar la rúbrica:
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| Planificación y organización | 3
-| Autoaprendizaje | 3
-| Solución de Problemas | 3
-| Dar y recibir feedback | 3
-| Adaptabilidad | 3
-| Trabajo en equipo (trabajo colaborativo y responsabilidad) | 3
-| Comunicación eficaz | 3
-| Presentaciones | 3
-
-***
-
-## Pistas / Tips / Lecturas complementarias
-
-### Mobile first
-
-El concepto de [_mobile first_](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
-hace referencia a un proceso de diseño y desarrollo donde partimos de cómo se ve
-y cómo funciona la aplicación en un dispositivo móvil primero, y más adelante se
-ve como adaptar la aplicación a pantallas progresivamente grandes y
-características específicas del entorno desktop. Esto es en contraposición al
-modelo tradicional, donde primero se diseñaban los websites (o webapps) para
-desktop y después se trataba de _arrugar_ el diseño para que entre en pantallas
-más chicas. La clave acá es asegurarse de que desde el principio diseñan usando
-la vista _responsive_ de las herramientas de desarrollador (developer tools) del
-navegador. De esa forma, partimos de cómo se ve y comporta la aplicación en una
-pantalla y entorno móvil.
-
-### Múltiples vistas
-
-En proyectos anteriores nuestras aplicaciones habían estado compuestas de una
-sola _vista_ principal (una sóla _página_). En este proyecto se introduce la
-necesidad de tener que dividir nuestra interfaz en varias _vistas_ o _páginas_
-y ofrecer una manera de navegar entre estas vistas. Este problema se puede
-afrontar de muchas maneras: con archivos HTML independientes (cada uno con su
-URL) y links tradicionales, manteniendo estado en memoria y rederizando
-condicionalmente (sin refrescar la página), [manipulando el historial del
-navegador](https://developer.mozilla.org/es/docs/DOM/Manipulando_el_historial_del_navegador)
-con [`window.history`](https://developer.mozilla.org/es/docs/Web/API/Window/history),
-usando una librería (por ejemplo [`react-router`](https://github.com/ReactTraining/react-router)
-o [`vue-router`](https://router.vuejs.org/)). En este proyecto te invitamos a
-explorar opciones y decidir una opción de implementación.
-
-### Escritura de datos
-
-En los proyectos anteriores hemos consumido (leído) datos, pero todavía no
-habíamos escrito datos (salvar cambios, crear datos, borrar, ...). En este
-proyecto tendrás que crear (salvar) nuevos datos, así como leer, actualizar y
-modificar datos existentes. Estos datos se podrán guardar localmente usando
-[`localStorage`](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
-o de forma remota usando [Firebase](https://firebase.google.com/).
-
-### Te dejamos un ejemplo de una historias de usuario del proyecto anterior (_Data-dasboard_)
-
-En el proyecto "Data Dashboard", la primera historia "épica" podría haber sido:
-
-Yo, como **Training Manager** quiero poder **ver el progreso de solución de
-ejercicios de JS de las estudiantes de mi(s) cohort(s)** para **entender
-cuánto están practicando y qué tan bien les está yendo**
-
-Esta la podríamos haber dividido en algunas más pequeñas, por ejemplo:
-
-1. Yo, como **Training Manager** quiero poder **seleccionar cada uno de los
-   cohorts de mi ciudad** para **ver un listado de todas las estudiantes de ese
-   cohort, y que incluya el % de progreso de solución de ejercicios de cada una
-   de ellas**
-2. Yo, como **Training Manager** quiero poder **seleccionar a una estudiante en
-   particular** para **ver el % de progreso de solución de todos los ejercicios
-   y el resultado decada uno de ellos**
-
-Como ves, dividirla en 1 y 2, hace que sea mucho más fácil imaginar y entender
-lo que el equipo tiene que conseguir para completarla.
-
-### Te dejamos un ejemplo de una historias de usuario para este proyecto
-
-En el proyecto de la *"red social"*, las primeras historias podrían ser:
-
-* Yo, como una **feminista**, quiero poder registrarme en una nueva red social  para conectarme con otras personas con ideales como yo.
-  - Yo, como usuaria registrada en esta red social quiero poder loguearme con mi correo para empezar a usar esta red.
-  - Yo, como usuaria registrada en esta red social, quiero poder loguearme con mi cuenta facebook o google para empezar a usar esta red.
-
-* Yo, como usuaria logueada en esta red social, quiero poder postear un mensaje en mi muro para que otras personas puedan ver lo que pienso.
-
-* Yo, como usuaria logueada en esta red social, quiero poder editar o eliminar mis posts por si me arrepiento de lo que puse.
-
-* Yo, como usuaria logueada  quiero poder darle like/estrellas a un posts para expresar mi apoyo a una publicación.
-
-* Yo, como usuaria logueada quiero poder ver los posts publicos de otrxs usuarixs aunque no sean mis amigxs.
-
-* Yo, como usuaria logueada quiero poder compartir posts de texto, imagen ó texto con imagen para comunicar mejor mis ideas.
-
-Como ves en la primer historia, podemos dividir dicha historia en historias mas pequeñas, haciendo mas fácil imaginar y entender lo que el equipo tiene que conseguir para completarla e incluso podiendo dividir en tareas aún más pequeñas.
-
-Otras:
-
-* [Diseño web, responsive design y la importancia del mobile first - Media Click](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
-* [Mobile First: el enfoque actual del diseño web móvil - 1and1](https://www.1and1.es/digitalguide/paginas-web/diseno-web/mobile-first-la-nueva-tendencia-del-diseno-web/)
-* [Mobile First - desarrolloweb.com](https://desarrolloweb.com/articulos/mobile-first-responsive.html)
-* [Mobile First - ZURB](https://zurb.com/word/mobile-first)
-* [Mobile First Is NOT Mobile Only - Nielsen Norman Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/)
-* [Offline first manifesto](http://offlinefirst.org/)
-
-***
-
-## Checklist
-
-### General
-
-* [ ] Producto final sigue los lineamientos del diseño.
-
-### `README.md`
-
-* [ ] Definición del producto.
-* [ ] Benchamark de las principales redes sociales.
-* [ ] Resumen de entrevistas con usuarios.
-* [ ] Link/screenshots prototipo de alta fidelidad.
-* [ ] Conclusiones de pruebas del prototipo con usuarios.
-* [ ] Conclusiones de pruebas con el producto en HTML.
-
-### Pruebas / tests
-
-* [ ] Tests unitarios cubren un mínimo del 70% de statements, functions, lines,
-  y branches.
-* [ ] Pasa tests (y linters) (`yarn test`).
-
-### Creación de cuenta (sign up)
-
-* [ ] Permite crear cuenta.
-* [ ] Valida email.
-* [ ] Valida password.
-* [ ] Muestra mensajes de error.
-
-### Inicio de sesión (sign in)
-
-* [ ] Permite iniciar sesión.
-* [ ] Valida email.
-* [ ] Valida password.
-* [ ] Muestra mensajes de error.
-
-### Muro (wall/feed)
-
-* [ ] Muestra _muro_.
-* [ ] Permite publicar nuevos posts.
-* [ ] Permite eliminar posts.
-* [ ] Pide confirmación antes de borrar posts.
-* [ ] Permite editar posts (in place).
-* [ ] Permite filtrar posts por público/amigos.
-* [ ] Permite marcar posts como _gustados_ (like).
+#### ¿Por qué los embarazos adolescentes son un problema? 
+
+**__El INEGI ha documentado que madres adolescentes con frecuencia se ven obligadas a dejar la escuela, con la consecuente desventaja que, al tener una escasa o nula educación formal, se reducen las oportunidades en materia de educación y empleo, lo que limita gradualmente sus oportunidades de desarrollo.__**
+
+Esto repercute tanto en la vida de la menor como en la vida del futuro hijo ya que se vera limitado al acceso de varios servicios basicos:como son servicios medicos,servicios alimenticios y servicios educativos.
+
+Ademas de que el INEGI reporta que en su mayoria las adolescentes que decicidieron ser madres en su mayoria son madres solteras.
+
+Ademas de que al ser madres solteras repercute en su vida social ,y las perjudica a nivel psicologico ya que tienen que lidiar con muchas opiniones desvalorizantes,y esto repercute en varios ambitos de su vida.
+
+La mayoria de adolescentes que decidieron ser madres ,solo cuentan con un nivel escolar máximo de secundaria,limitandolas en el sector laboral siendo asi que solo tienen  muy pocas opciones para generar ingresos ,las únicas opciones con las que cuentan son las siguientes:
+
+- **Trabajar en el sector informal; percibiendo un sueldo menor al minimo ya que sus horarios de trabajo no pueden cumplir los requerimientos estipulados por contrato.**
+
+- **Trabajar en el sector domestico;teniendo que trabajar mas tiempo para poder percibir el sueldo minimo,con la poca seguridad que el trabajo obtenido sea constante ya que este tipo de trabajo es variado y poco estable.**
+
+- **Algunas adolescentes no logran conseguir trabajo.**
+
+Nosotros hemos visto el gran problema que tienen que afrontar las adolescentes embarazdas,y hemos decidido crear una solucion accesible para estas jovenes ; La solucion que nosotros ofrecemos es una red social para ellas ,donde podran encontrar lo que ellas necesitan:
+
+- **Respeto** Esto sera lo primero que caracterizara a esta red,ya que aunque exista diferencia de opinion debera ser respetada.
+
+- **Apoyo emocional;** Al ser adolescentes y estar embarazdas es muy difícil que puedan hablar sobre su situación con algun familiar sin sentirse juzgadas.
+ 
+- **Alternativas;** Asesorandolas y dandoles a conocer las alternativas con las que cuentan.Proporcionandoles el nombre de Instituciones donde pueden obtener varios servicios segun los requieran.
+ 
+- **Comprension;** La red estara apoyada por mujeres que compartiendo su experiencia podras aportar grandes lecciones.
+
+- **Información;** Se les brindara todo tipo de informacion pero de una manera fácil de entender.
+
+## **Proceso de UX**
+
+## Sketching de Diseño esperado o ideal (Baja fidelidad).
+- Mobile first + Desktop
+
+#### Blanco y negro
+![Prototipo_blanco y negro](/src/images/prototipo_b&w.gif)
+
+#### Probando con colores
+![Prototipo_blanco y negro](/src/images/prototipo_color.gif)
+
+
+# DEFINICION DEL PRODUCTO
+
+El embarazo en adolescentes es un fenómeno que ha cobrado importancia en los últimos años debido a que México ocupa el primer lugar en el tema, entre los países de la Organización para la Cooperación y el Desarrollo Económico (OCDE) con una tasa de fecundidad de 77 nacimientos por cada mil adolescentes de **15 a 19 años de edad**. **Asimismo, en México, 23% de las y los adolescentes inician su vida sexual entre los 12 y los 19 años**. De estos, 15% de los hombres y 33% de las mujeres no utilizaron ningún método anticonceptivo en su primera relación sexual. Es así que de acuerdo con estos datos, aproximadamente ocurren al año 340 mil nacimientos en mujeres menores de 19 años.
+
+El embarazo en las y los adolescentes afecta negativamente la salud, la permanencia en la escuela, los ingresos presentes y futuros, el acceso a oportunidades recreativas, sociales y laborales especializadas y de calidad y el desarrollo humano. Además del embarazo, tener relaciones sexuales sin protección implica un riesgo permanente de adquirir una infección de transmisión sexual.
+
+Es por ello que se ha decidido crear esta aplicacion movil  para la asesorar y apoyar a jovenes   aolescentes embarazadas , y brindar un espacio donde puedan tocar varios temas de su interes con personas experiemtadas y conocedoras del tema,ademas de que podran hablar con otras jovenes de su edad y compratir sus vivencias ,permitiendo asi crear un espacio de confianza y apoyo.
+
+
+# BENCHMARK
+#### Para elaborar esta tabla de comparacion se tomo en cuenta las aplicaciones que existen sobre temas de educacion sexual para adolescentes.
+#### Haciendo una comparativa entre todas ellas Los resultados se muestran a continuacion :
+
+
+Nombre app mobile |           CREsI      |
+-------------     | ---------------------|
+Nombre app mobile |Cresi                 |
+Pais de Origen    |Argentina             |
+Selección Idiomas |si                    |
+Interactiva       |si                    |
+Intuitiva         |si                    |
+Gratuita          |si                    |
+Descargas         |5,000                 |
+Android           |si                    |
+Itunes            |no                    |
+Juego             |si                    |
+Edad Minima       |12                    | 
+
+Nombre app mobile |Se como Jose y Josefa |
+-------------     | ---------------------|
+Nombre app mobile |Se como Jose y Josefa |
+Pais de Origen    |Madrid España         |
+Selección Idiomas |Español               |
+Interactiva       |si                    |
+Intuitiva         |si                    |
+Gratuita          |si                    |
+Descargas         |1,000                 |
+Android           |si                    |
+Itunes            |no                    |
+Juego             |si                    |
+Edad Minima       |------                | 
+
+Nombre app mobile |No te adelantes       |
+-------------     | ---------------------|
+Nombre app mobile |No te adelantes       |
+Pais de Origen    |Baja California       |
+Selección Idiomas |Español               |
+Interactiva       |si                    |
+Intuitiva         |si                    |
+Gratuita          |si                    |
+Descargas         |-----                 |
+Android           |no                    |
+Itunes            |si                    |
+Juego             |si                    |
+Edad Minima       |------                | 
+
+Nombre app mobile |Sex Education         |
+-------------     | ---------------------|
+Nombre app mobile |Sex Education         |
+Pais de Origen    |----------            |
+Selección Idiomas |Español               |
+Interactiva       |si                    |
+Intuitiva         |si                    |
+Gratuita          |si                    |
+Descargas         |1,000                 |
+Android           |si                    |
+Itunes            |no                    |
+Juego             |si                    |
+Edad Minima       |17+                   | 
+
+# RESUMEN DE ENTREVISTAS DE USUARIO
+
+Se elaboro una entrevista para poder saber la opinion sobre este tema.
+Las Entrevistas se realizaron a mujeres de diferentes edades.Para asi abordar varios puntos de vista.
+
+(https://ana1563.typeform.com/to/mBtGLx)
+
+
+## Análisis argumentativo de la elección de la Red Social
+
+Audio de la entrevista con nuestro cliente, primer contacto:
+ [Propuesta ante cliente](https://drive.google.com/drive/folders/18EQK_W0VwR8XwphCerMWz2ONYNA98P0K?usp=sharing)
+
+ Es importante mencionar que las redes sociales han tenido un gran impacto en la sociedad en un ámbito global, y  la mayoría de los usuarios son específicamente jóvenes, recordemos que cada red social cumple cierta finalidad.
+Al crear una red social (CountOnMe.App) comunitaria de apoyo dirigida a mujeres sin importar edad o situación económica, se pretende crear un espacio de convivencia humana donde prevalece el trato igualitario y el respeto mutuo. Al compartir experiencias propias  o vivencias con personas que en su adolescencia tuvieron el proceso de un embarazo y lo que implicó en la vida de cada una, invitando a madres jóvenes a externar sus inquietudes o miedos que pudiera ser el caso de mujeres que temen a las represalias ante su familia, pareja, amigos o en su círculo social, sin limitar ese apoyo emocional sólo a las jóvenes, cualquiera que desee comunicar una inquietud tendrá este espacio.
+A continuación muestro algunas de las respuestas que obtuve al plantear la idea de esta red social ante determinadas preguntas:
+
+#### ¿Por qué crees que sería o considerarían viable comentar  sobre asuntos personales (experiencias, acciones, actitudes, pensamientos, ser madres jóvenes, ser madres adultas, etc) por medio de una app ante extrañas antes que con su círculo social?
+
+Primera respuesta:
+
+“En mi experiencia he entrado como a foros para ver las historias que otras publican y  supongo que les es más fácil ser juzgadas por personas que no conocen que ha ser juzgadas por su círculo social.”
+
+Segunda respuesta:
+
+“No es que no confié en mi círculo social porque igual puedo platicar con ellos del mismo tema, pero considero que el contárselo a extrañas por así decirlo te da otra perspectiva. Ellas ven el problema o la experiencia desde su punto de vista y opinan y eso a veces es necesario porque te abre la mente, aparte creo que por estar pasando por situaciones similares tienen más empatía”
+
+
+### Historia del usuario
+
+Yo como mujer, siendo madre soltera y conocer a más de una mujer en la misma situación, me gustaría formar parte de esta red social ya que cuando nos enteramos que estamos embarazadas nos encontrabamos sin una persona a quien poder acudir y contarle nuesta situación, no teniamos apoyo y no sabemos de que manera podemos decirle a nuestros padres que estabamos embarazadas. 
+
+Me gustaria poder apoyar a las jóvenes que estan pasando por la situación por la que yo pase, ya que puedo comprender la confusión y el miedo por el que atraviesan. Me hubiera gustado que en el momento en el que quede embarazada existiera una red social como esta, ya que habría sentido la tranquilidad y confianza de externar mis emociones con mujeres que tienen conocimiento del embarazo. 
+
+### Principales usuarios de la Red Social
+
+Esta comunidad se penso para la interacción de las mujeres, su objetivo principal es ser una
+red de apoyo a las jóvenes adolescentes que estan embarazadas, ya que como bien se sabe enfrentar
+esta situación es díficil para las jóvenes ya que no saben como enfrentar el embarazo, ni saben
+con quien pueden acercarse para pedir consejos y encontrar el apoyo que necesitan.
+
+### ¿Que problema resuelve el producto para los usuarios?
+
+El principal problema que resuelve nuestro producto, es brindar el espacio para que las jóvenes
+encuentren un lugar seguro donde puedan compartir sus inquietudes, de igual forma que encuentren el apoyo en mujeres que han pasado por la misma situación o bien por mujeres con hijos.
+
+Si les interesa obtener información de métodos anticonceptivos y/o información de educación sexual se incluyen links como referencia que las pueden dirigir hacia páginas con mayor información del tema en cuestion, o bien a páginas de asociaciones.
+
+Dependiendo de los intereses, y si así lo requiere la persona también se proporciona la referencia para encontrar en lugares seguros y de confianza el apoyo psicologico, atención medica y orientación todo a traves de expertos en dichos temas.
+
+### ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
+
+Los objetivos de los usuarios son encontrar un espacio donde poder exponer su situación y encontrar
+el apoyo y/o consejos en mujeres que tengan conocimiento de esas experiencias.
+
+### ¿Cuáles son las principales funcionalidades del producto y cuál es su prioridad?
+
+La principal funcionalidad y prioridad del producto es la existencia de un espacio donde las mujeres
+puedan exteriorizar sus sentimientos y brindar apoyo a las adolescentes que atraviesan por un embarazo precoz.
+
+### Opinion del público
+
+Se realizó una encuesta a mujeres de distintas edades y estatus sociales, en la cual pudimos observar que el 40% de las mujeres encuestadas no conocen todas las ventajas y desventajas de los métodos anticonceptivos; el 60% opina que la vida sexual en adolescentes inicia entre los 15 y 17 años; el 45% piensa que las relaciones sexuales entre adolescentes es por la curiosidad de saber que es y como se siente; el 65% considera que el embarazo en la adolescente es debido a la mala educación sexual; el 45% opina que las consecuencias del embarazo en adolescentes es la deserción escolar; y finalmente el 85% de las mujeres encuestadas consideran que las jóvenes embarazadas no cuentan con el apoyo suficiente.
+
+### Encuesta
+
+![encuesta0](/src/images/encuesta0.JPG)
+
+![encuesta1](/src/images/encuesta1.JPG)
+
+![encuesta2](/src/images/encuesta2.JPG)
+
+![encuesta3](/src/images/encuesta3.JPG)
+
+![encuesta4](/src/images/encuesta4.JPG)
+
+### Estadística de adolescentes embarazadas
+
+Nos dimos a la tarea de investigar acerca del embarazo en adolescentes, y pudimos notar que es un problema recurrente y que cada año el porcentaje de embarazo precoz aumenta.
+
+En la estadística que realizó INEGI en el 2017, menciona que de acuerdo con la ENADID 2014, una de cada tres (29.2%) mujeres adolescentes del grupo de 15 a 19 años ya inició su vida sexual y 16.4% declararon ser sexualmente activas.7 Asimismo 44.9% declaró que ella o su pareja no utilizaron algún método anticonceptivo en su primera relación sexual.
+
+La razón principal declarada por las adolescentes que no usaron algún método anticonceptivo
+en su primera relación sexual, fue porque no planeaba tener relaciones sexuales (32.9%). En
+segundo lugar, porque quería embarazarse (17.9%). Le siguen, porque no creyó que podría
+quedar embarazada (17.4%), no conocía los métodos, no sabía dónde obtenerlos o cómo
+usarlos (17.1%) y 12.7% declaró otras razones.
+
+La estadística muestra lo siguiente:
+![INEGI](/src/images/INEGI.JPG)
+
+Diferenciando por edad, las adolescentes sexualmente activas que en su mayoría no utilizan
+algún método anticonceptivo son las de 15 y 16 años (57.8% y 49.2% respectivamente). A
+partir de los 17 años el uso de métodos anticonceptivos se incrementa, siendo las
+adolescentes de 18 y 19 años quienes más los utilizan (59.8% y 65.6% respectivamente).
+
+![INEGI1](/src/images/INEGI1.JPG)
+
+**Fuentes de consulta.**
+
+**El universal:**(http://www.eluniversal.com.mx/nacion/sociedad/ocde-mexico-primer-lugar-de-embarazo-en-adolescentes)
+
+**Estadisticas de INEGI:**
+(http://www.inegi.org.mx/saladeprensa/aproposito/2018/madre2018_Nal.pdf)
