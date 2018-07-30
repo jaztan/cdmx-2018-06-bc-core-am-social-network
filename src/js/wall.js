@@ -49,7 +49,6 @@ function eliminar(id) {
     .then(function() {
       console.log("Document successfully deleted!");
     })
-<<<<<<< HEAD
     .catch(function(error) {
       console.error("Error removing document: ", error);
     });
