@@ -135,12 +135,12 @@ const btnFace=document.getElementById('btnFace');
 
 
 btnFace.addEventListener('click',function(e){
-  e.preventDefault();
+  /*e.preventDefault();*/
 let provider = new firebase.auth.FacebookAuthProvider();
 validacion(provider);
 });
 
-//const validacion=(provider)=>{
+/*const validacion=(provider)=>{
     firebase.auth().signInWithPopup(provider).then(function(result) {
       console.log(result);
       window.location.assign("../views/wall.html");
@@ -159,8 +159,45 @@ validacion(provider);
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
         // ...
-      });
+      });*/
 
+
+ 
+ function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else {
+      // The person is not logged into your app or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    }
+  };
+ function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+ window.fbAsyncInit = () => {
+        FB.init({
+          appId      : '289516981795849',
+          xfbml      : true,
+          version    : 'v3.1'
+        });
+        FB.AppEvents.logPageView();
+      };
+FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+
+  };
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -168,5 +205,12 @@ validacion(provider);
   js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.1&appId=289516981795849&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
- 
+function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+
 
