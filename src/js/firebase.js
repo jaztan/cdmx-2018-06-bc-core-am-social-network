@@ -98,8 +98,6 @@ window.countMeNetwork = {
         }
       });
   },
-
-
   verififyAccount: () => {
     let user = firebase.auth().currentUser;
     user
@@ -124,8 +122,8 @@ window.countMeNetwork = {
       }).catch(error => {
         console.log('Error al cerrar sesión', error);
       });
-  }
-};
+  };
+
 
 /*
 const btnFace=document.getElementById('btnFace');
