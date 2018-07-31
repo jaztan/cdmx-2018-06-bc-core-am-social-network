@@ -70,34 +70,7 @@ window.countMeNetwork = {
         }
       });
   },
-  signInFacebook: () => {
-    const provider = new firebase.auth.FacebookAuthProvider();
-    //provider.addScope('public_profile');
-    firebase
-      .auth()
-      .signInWithPopup(provider)
-      .then(result => {
-        const token = result.credential.accerssToken;
-        const user = result.user;
-        location.href = 'views/wall.html';
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        console.log(result);
-        console.log(token);
-        console.log(user);
-      }).catch(error => {
-        // Handle Errors here.
-        let errorCode = error.code;
-        let errorMessage = error.message;
-        console.log(errorMessage);
-        let email = error.email;
-        console.log(email);
-        let credential = error.credential;
-        console.log(credential);
-        if (errorCode === 'auth/account-exists-with-different-credential') {
-          alert('Usuario ya existente, intenta de nuevo');
-        }
-      });
-  },
+ 
   verififyAccount: () => {
     let user = firebase.auth().currentUser;
     user
@@ -122,7 +95,7 @@ window.countMeNetwork = {
       }).catch(error => {
         console.log('Error al cerrar sesión', error);
       });
-  }};
+  }
 
 
 /*
@@ -157,12 +130,11 @@ validacion(provider);
     });
 //}
 */
-
-window.fbAsyncInit = () => {
+/*window.fbAsyncInit = () => {
   FB.init({
     appId: '289516981795849',
     xfbml: true,
     version: 'v3.1'
   });
   FB.AppEvents.logPageView();
-};
+};*/

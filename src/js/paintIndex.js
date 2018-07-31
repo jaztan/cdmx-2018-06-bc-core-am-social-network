@@ -19,7 +19,3 @@ document.getElementById('signin-google').addEventListener('click', event => {
   event.preventDefault();
   countMeNetwork.signInFacebook();
 });*/
-btnFace.addEventListener('click',function(e){
-  let provider = new firebase.auth.FacebookAuthProvider();
-  validacion(provider);
-  });
