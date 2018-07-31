@@ -13,8 +13,9 @@ document.getElementById('signin-google').addEventListener('click', event => {
   event.preventDefault();
   countMeNetwork.signInGoogle();
 });
-const btnFace = document.getElementById('facebook-button');
-btnFace.addEventListener('click', function (e) {
-  let provider = new firebase.auth.FacebookAuthProvider();
-  validacion(provider);
+
+document.getElementById('facebook-button').addEventListener('click', event => {
+  console.log('diste un click');
+  event.preventDefault();
+  countMeNetwork.signInFacebook();
 });
