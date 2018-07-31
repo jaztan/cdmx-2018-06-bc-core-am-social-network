@@ -1,11 +1,11 @@
 window.initializeFirebase = () => {
   firebase.initializeApp({
-    apiKey: "AIzaSyCm7I3cvutJG8L4Sbt7BiK-VQdPdxk3i4Y",
-    authDomain: "count-on-me-476fd.firebaseapp.com",
-    databaseURL: "https://count-on-me-476fd.firebaseio.com",
-    projectId: "count-on-me-476fd",
-    storageBucket: "count-on-me-476fd.appspot.com",
-    messagingSenderId: "578346489088"
+    apiKey: 'AIzaSyCm7I3cvutJG8L4Sbt7BiK-VQdPdxk3i4Y',
+    authDomain: 'count-on-me-476fd.firebaseapp.com',
+    databaseURL: 'https://count-on-me-476fd.firebaseio.com',
+    projectId: 'count-on-me-476fd',
+    storageBucket: 'count-on-me-476fd.appspot.com',
+    messagingSenderId: '578346489088'
   });
 };
 
@@ -16,9 +16,10 @@ window.countMeNetwork = {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then(result => {
+        countMeNetwork.verififyAccount();
 
-        //verififyAccount();
-        location.href = "../index.html";
+        countMeNetwork.signOut();
+        location.href = '../index.html';
       })
       .catch(error => {
         // Handle Errors here.
@@ -36,7 +37,7 @@ window.countMeNetwork = {
       .signInWithEmailAndPassword(email, password)
       .then(event => {
         // Se utiliza la interfaz Location, implementando la propiedad Location.href que contiene la URL
-        location.href = "../views/wall.html";
+        location.href = 'views/wall.html';
       })
       .catch(error => {
         const errorCode = error.code;
@@ -48,13 +49,16 @@ window.countMeNetwork = {
 
   signInGoogle: () => {
     const provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
     firebase
       .auth()
       .signInWithPopup(provider)
       .then(result => {
-        location.href = "../views/wall.html";
+        const token = result.credential.accerssToken;
+        const user = result.user;
+        location.href = 'views/wall.html';
         // This gives you a Google Access Token. You can use it to access the Google API.
-        console.log(result)
+        console.log(result);
       }).catch(error => {
         // Handle Errors here.
         let errorCode = error.code;
@@ -73,26 +77,27 @@ window.countMeNetwork = {
     user
       .sendEmailVerification()
       .then(result => {
-        alert("Enviando correo de verificación...");
+        alert('Enviando correo de verificación...');
         // Email sent.
       })
-      .catch(function (error) {
+      .catch(error => {
         console.log(error);
         // An error happened.
       });
   },
 
   signOut: () => {
-    firebase.auth().signOut()
+    firebase
+      .auth()
+      .signOut()
       .then(event => {
-        location.href('../index.html');
-        alert('Saliendo...')
+        location.href = '../index.html';
+        alert('Saliendo...');
       }).catch(error => {
-        console.log('Error al cerrar sesión');
+        console.log('Error al cerrar sesión', error);
       });
   }
-
-}
+};
 
 /*
 const btnFace=document.getElementById('btnFace');
@@ -128,11 +133,10 @@ validacion(provider);
 */
 
 window.fbAsyncInit = () => {
-        FB.init({
-          appId      : '289516981795849',
-          xfbml      : true,
-          version    : 'v3.1'
-        });
-        FB.AppEvents.logPageView();
-      };
-
+  FB.init({
+    appId: '289516981795849',
+    xfbml: true,
+    version: 'v3.1'
+  });
+  FB.AppEvents.logPageView();
+};
