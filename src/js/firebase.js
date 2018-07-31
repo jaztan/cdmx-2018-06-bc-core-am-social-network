@@ -72,7 +72,7 @@ window.countMeNetwork = {
   },
   signInFacebook: () => {
     const provider = new firebase.auth.FacebookAuthProvider();
-    provider.addScope('public_profile');
+    //provider.addScope('public_profile');
     firebase
       .auth()
       .signInWithPopup(provider)
