@@ -10,6 +10,8 @@ const validacion = (provider) => {
     // The signed-in user info.
     var user = result.user;
     // ...
+    window.location.assign("../views/wall.html");
+    
   }).catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
