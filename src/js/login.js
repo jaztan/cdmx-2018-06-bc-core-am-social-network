@@ -10,7 +10,7 @@ const validacion = (provider) => {
     // The signed-in user info.
     var user = result.user;
     // ...
-     location.href = 'views/wall.html';
+     location.href = '/src/views/wall.html';
     
 }).catch(error => {
     // Handle Errors here.
