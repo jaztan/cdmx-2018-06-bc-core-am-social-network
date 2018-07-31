@@ -82,7 +82,11 @@
    <!-- Load Facebook SDK for JavaScript-->
   <div id="fb-root"></div>
 <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div>
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
 
+<div id="status">
+</div>
 
   <!-- Your like button code 
   <div class="fb-like" 
@@ -92,6 +96,10 @@
     data-show-faces="true">-->
   </div>
 
+  
+  
+  
+  
 </body>
 
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
