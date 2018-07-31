@@ -122,7 +122,7 @@ window.countMeNetwork = {
       }).catch(error => {
         console.log('Error al cerrar sesión', error);
       });
-  };
+  }};
 
 
 /*
