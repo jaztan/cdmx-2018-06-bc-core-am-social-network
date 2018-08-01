@@ -14,71 +14,69 @@
   <!--  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" /> -->
 
   <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
     crossorigin="anonymous">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="shortcut icon" href="../images/countme_logo.png">
+  <link rel="shortcut icon" href="http://imagizer.imageshack.us/a/img924/7209/YlDYYA.png">
 
   <title>CountMe.app</title>
 </head>
+
 <body>
   <!-- la clase container nos limita a un espacio-->
   <div class="container">
     <header>
       <br>
       <nav class="navbar navbar-light bg-light">
-          <img src="../images/countme_logo.png" width="50" height="50" class="d-inline-block align-top" alt="">
-          <a class="navbar-brand">CountMe</a>
-          <form class="form-inline">
-            <button id="signout" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-door-open"></i>SignOut</button>
-          </form>
-        </nav>
+        <img src="http://imagizer.imageshack.us/a/img924/7209/YlDYYA.png" width="50" height="50" class="d-inline-block align-top" alt="">
+        <a class="navbar-brand">CountMe</a>
+        <form class="form-inline">
+          <button id="signout" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            <i class="fas fa-door-open"></i>SignOut</button>
+        </form>
+      </nav>
     </header>
   </div>
 
-    <section id="user-profile">
-        <div class="container-fluid mt-6 text-center">
-          <div class="row">
-            <div class="span3">
-              <div class="card border-secondary" style="width:100%">
-                <img class="card-img-top" style="width:100%" id="user-image">
-                <div class="card-body text-center">
-                  <p>
-                    Bienvenida
-                    <br>
-                    <i class="fas fa-user"></i>
-                    <strong id="user-name"></strong>
-                  </p>
-                  <p>
-                    <i class="far fa-envelope"></i>
-                    <span id="user-email"></span>
-                  </p>
-                  <p class="card-text" id="presentacion">Hi</p>
-                </div>
-              </div>
+  <section id="user-profile">
+    <div class="container-fluid mt-6 text-center">
+      <div class="row">
+        <div class="span3">
+          <div class="card">
+            <img class="card-img-top" id="user-photo">
+            <div class="card-body text-center">
+              <p class="card-text">
+                Bienvenida
+                <br>
+                <strong id="user-name"></strong>
+              </p>
+              <p>
+                <i class="fas fa-at"></i>
+                <span id="user-email"></span>
+              </p>
             </div>
-            <div class="col-md-9">
-              <div class="card mb-5 border-secondary mt-3 mt-md-0">
-                <div class="card-body">
-                  <form class="form-inline">
-                    <textarea id="user-content-post" class="form-control form-textarea" placeholder="Escribe una publicación"></textarea>
-                    <div class="ml-auto">
-                      <button class="btn btn-warning mt-2" id="send-post">
-                        <i class="fas fa-location-arrow"></i>
-                      </button>
-                    </div>
-
-                  </form>
-                </div>
-              </div>
-              <div id="list-of-post"></div>
-            </div>
-
           </div>
         </div>
-      </section>
+        <div class="col-md-9">
+          <div class="card mb-5 border-secondary mt-3 mt-md-0">
+            <div class="card-body">
+              <form class="form-inline">
+                <input id="user-content-post" class="form-control form-textarea" placeholder="Escribe una publicación">
+                <div class="ml-auto">
+                  <button type="submit" class="btn btn-block mt-4" id="send-post">
+                    <i class="fas fa-check-circle"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="list-of-post"></div>
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

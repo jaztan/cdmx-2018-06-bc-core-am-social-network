@@ -1,0 +1,44 @@
+
+section {
+background-image: url('https://assets2.domestika.org/project-items/001/815/262/5-big.jpg?1483378928');
+font-family: 'Source Sans Pro', sans-serif;
+
+}
+/* Desde un escritorio*/
+
+@media (min-width: 1200px) {
+  /* Desde un escritorio pequeño o una tablet*/
+  @media (min-width: 768px) and (max-width: 979px) {}
+  /* Desde Tablet y Smartphone */
+  @media (min-width: 767px) {}
+  /* Smartphone */
+  @media (min-width: 480px) {}
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+
+  }
+  @media only screen and (min-width: 600px) {}
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 768px) {
+    .movil {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .titulo-recom {
+      font-size: 15px;
+    }
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 992px) {
+    .movil {
+      display: none;
+    }
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 1025px) {
+    .movil {
+      display: none;
+    }
+  }
