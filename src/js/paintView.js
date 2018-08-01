@@ -9,4 +9,3 @@ document.getElementById('btn-singin').addEventListener('click', event => {
   countMeNetwork.registerNewAccount(email, password);
   countMeNetwork.verififyAccount();
 });
-

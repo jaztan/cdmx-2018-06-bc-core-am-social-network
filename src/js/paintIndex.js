@@ -13,3 +13,4 @@ document.getElementById('signin-google').addEventListener('click', event => {
   event.preventDefault();
   countMeNetwork.signInGoogle();
 });
+

@@ -53,7 +53,7 @@ window.countMeNetwork = {
     firebase
       .auth()
       .signInWithPopup(provider)
-      .then(result => {
+      .then(result => 
         const token = result.credential.accessToken;
         const user = result.user;
         location.href = 'views/wall.html';
@@ -86,14 +86,16 @@ window.countMeNetwork = {
   },
 
   signOut: () => {
-      firebase
+    firebase
       .auth()
       .signOut()
       .then(event => {
-          location.href = '../index.html';
-          alert('Saliendo...');
+        location.href = '../index.html';
+        alert('Saliendo...');
       }).catch(error => {
-          console.log('Error al cerrar sesión', error);
-      })
+        console.log('Error al cerrar sesión', error);
+      });
   }
 }
+
+
