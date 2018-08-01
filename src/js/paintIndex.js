@@ -14,8 +14,8 @@ document.getElementById('signin-google').addEventListener('click', event => {
   countMeNetwork.signInGoogle();
 });
 
-/*document.getElementById('facebook-button').addEventListener('click', event => {
+/* document.getElementById('facebook-button').addEventListener('click', event => {
   console.log('diste un click');
   event.preventDefault();
   countMeNetwork.signInFacebook();
-});*/
+}); */

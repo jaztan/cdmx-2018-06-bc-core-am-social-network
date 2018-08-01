@@ -96,6 +96,7 @@ window.countMeNetwork = {
         console.log('Error al cerrar sesión', error);
       });
   }
+};
 
 
 /*
@@ -130,11 +131,11 @@ validacion(provider);
     });
 //}
 */
-/*window.fbAsyncInit = () => {
+/* window.fbAsyncInit = () => {
   FB.init({
     appId: '289516981795849',
     xfbml: true,
     version: 'v3.1'
   });
   FB.AppEvents.logPageView();
-};*/
+}; */
