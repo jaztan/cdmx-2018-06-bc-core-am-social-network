@@ -1,5 +1,5 @@
+const btnFace=document.getElementById('facebook-button');
 btnFace.addEventListener('click', function (e) {
-  e.preventDefault();
   let provider = new firebase.auth.FacebookAuthProvider();
   validacion(provider);
 });
@@ -12,7 +12,7 @@ const validacion = (provider) => {
     let user = result.user;
     console.log();
 
-    /*href = '../views/wall.html'*/
+    /* href = '../views/wall.html' */
     window.location.assign('../views/wall.html');
   }).catch(error => {
     // Handle Errors here.
