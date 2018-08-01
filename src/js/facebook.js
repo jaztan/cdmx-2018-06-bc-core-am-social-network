@@ -2,8 +2,8 @@ const btnFace = document.getElementById('facebook-button');
 btnFace.addEventListener('click', event => {
   let provider = new firebase.auth.FacebookAuthProvider();
   validacion(provider);
-  /* location.href = 'views/wall.html'; */
-  location.assign('views/wall.html');
+  location.href = 'views/wall.html';
+   /*location.assign('views/wall.html'); */
   /* event.preventDefault(); */
   console.log(location);
 });
