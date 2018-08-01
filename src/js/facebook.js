@@ -1,4 +1,8 @@
-
+btnFace.addEventListener('click', function (e) {
+  e.preventDefault();
+  let provider = new firebase.auth.FacebookAuthProvider();
+  validacion(provider);
+});
 const validacion = (provider) => {
   firebase.auth().signInWithPopup(provider).then(result => {
     // This gives you a Facebook Access Token. You can use it to access the Facebook API.
@@ -6,9 +10,9 @@ const validacion = (provider) => {
     console.log(token);
     // The signed-in user info.
     let user = result.user;
-    console.log(user);
-    
-    /* href = '../views/wall.html' */
+    console.log();
+
+    /*href = '../views/wall.html'*/
     window.location.assign('../views/wall.html');
   }).catch(error => {
     // Handle Errors here.
