@@ -13,7 +13,8 @@ const validacion = (provider) => {
     console.log();
 
     /* href = '../views/wall.html' */
-    location.href('../views/wall.html');
+    /* location.href('../views/wall.html'); */
+    document.location = '../views/wall.html';
   }).catch(error => {
     // Handle Errors here.
     let errorCode = error.code;

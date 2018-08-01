@@ -150,9 +150,6 @@ window.wallNetwork = {
 };
 wallNetwork.getCurrentUserData();
 wallNetwork.drawPostByUser();
-
-
-
 /*
 function enviar() {
   var mensaje = document.getElementById('mensaje').value;
