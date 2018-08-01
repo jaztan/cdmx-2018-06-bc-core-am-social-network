@@ -92,11 +92,11 @@ const drawPostByUser = () => {
                 </div>
                 </div>
                 <div class="col-md-4 text-md-right text-center">
-                <button class="no-btn mr-4" onclick="addLikeToPost('${post.id}')">
                 <i class="fas fa-thumbs-up"></i></button>
-                <button class="no-btn" onclick="deletePost('${post.id}')">
-                <i class="far fa-trash-alt"></i></button>
-                <button class="no-btn" onclick="createUpdateArea('${post.id}')"><i class="ml-3 fas fa-pencil-alt"></i></button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="deletePost('${post.id}')">
+                <i class="far fa-trash-alt"></i> Delete</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="createUpdateArea('${post.id}')">
+                <i class="ml-3 fas fa-pencil-alt"></i> Edit</button>
                 </div>
                 </div>
                 </div>

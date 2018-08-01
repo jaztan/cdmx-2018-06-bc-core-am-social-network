@@ -1,12 +1,19 @@
+.bg-light {
+  background-color: #ffc10763!important;
+}
 
-section {
+
+body {
+
 background-image: url('https://assets2.domestika.org/project-items/001/815/262/5-big.jpg?1483378928');
+background-attachment: fixed;
 font-family: 'Source Sans Pro', sans-serif;
 
 }
+
 /* Desde un escritorio*/
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) {}
   /* Desde un escritorio pequeño o una tablet*/
   @media (min-width: 768px) and (max-width: 979px) {}
   /* Desde Tablet y Smartphone */

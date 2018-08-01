@@ -1,6 +1,26 @@
+.bg-light {
+  background-color: #ffc10763!important;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 150, 136, 0.28);
+  border-bottom: 1px solid rgb(0, 150, 136);
+}
+body {
+  background-image: url('https://assets7.domestika.org/project-items/001/815/267/7-big.jpg?1483378985');
+  background-attachment: fixed;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  }
+
+  .card-body{
+    background: chocolate;
+  }
 /* Desde un escritorio*/
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) {}
   /* Desde un escritorio pequeño o una tablet*/
   @media (min-width: 768px) and (max-width: 979px) {}
   /* Desde Tablet y Smartphone */
@@ -15,7 +35,7 @@
     .normal {
       display: none;
     }
-    .comentario-publicado {
+    .card-body {
       height: 100px;
     }
     .all-botones {
@@ -36,12 +56,6 @@
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 992px) {
-    .movil {
-      display: none;
-    }
-  }
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 1025px) {
     .movil {
       display: none;
     }
