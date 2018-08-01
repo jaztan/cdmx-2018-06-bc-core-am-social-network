@@ -2,6 +2,9 @@ const btnFace = document.getElementById('facebook-button');
 btnFace.addEventListener('click', (event)=> {
   let provider = new firebase.auth.FacebookAuthProvider();
   validacion(provider);
+  /* location.href = 'views/wall.html'; */
+  location.assign('views/wall.html');
+  console.log(location);
 });
 const validacion = (provider) => {
   firebase.auth().signInWithPopup(provider).then(result => {
@@ -10,11 +13,9 @@ const validacion = (provider) => {
     console.log(token);
     // The signed-in user info.
     let user = result.user;
-    console.log();
-
+    console.log(user);
     /* href = '../views/wall.html' */
     /* location.href('../views/wall.html'); */
-    document.location = '../views/wall.html';
   }).catch(error => {
     // Handle Errors here.
     let errorCode = error.code;
