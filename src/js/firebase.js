@@ -53,8 +53,8 @@ window.countMeNetwork = {
     firebase
       .auth()
       .signInWithPopup(provider)
-      .then(result => 
-        const token = result.credential.accessToken;
+      .then(result => {
+        const token = result.credential.accerssToken;
         const user = result.user;
         location.href = 'views/wall.html';
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -96,5 +96,4 @@ window.countMeNetwork = {
         console.log('Error al cerrar sesión', error);
       });
   }
-}
-
+};

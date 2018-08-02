@@ -2,6 +2,7 @@ initializeFirebase();
 
 // Initialize Cloud Firestore through Firebase
 const db = firebase.firestore();
+
 document.getElementById('signout').addEventListener('click', event => {
   event.preventDefault();
   countMeNetwork.signOut();
@@ -102,7 +103,6 @@ window.wallNetwork = {
         }
       });
   },
-
   checkUserIDforLike: (userID, likes) => {
     const positionUserID = likes.indexOf(userID);
     if (positionUserID === -1) {
@@ -111,8 +111,6 @@ window.wallNetwork = {
       return positionUserID;
     }
   },
-
-
   deletePost: (postID) => {
     db.collection('post').doc(postID).delete()
       .then(element => {
@@ -148,4 +146,3 @@ window.wallNetwork = {
 };
 wallNetwork.getCurrentUserData();
 wallNetwork.drawPostByUser();
-
