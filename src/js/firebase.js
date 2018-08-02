@@ -114,19 +114,19 @@ validacion(provider);
     console.log(result);
     window.location.assign("../views/wall.html");
      //location es un metodo
-      var token = result.credential.accessToken;
+      let token = result.credential.accessToken;
       // The signed-in user info.
-      var user = result.user;
+      let user = result.user;
       console.log("Iniciando Sesion con Facebook")
       // ...
     }).catch(function(error) {
       // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      let errorCode = error.code;
+      let errorMessage = error.message;
       // The email of the user's account used.
-      var email = error.email;
+      let email = error.email;
       // The firebase.auth.AuthCredential type that was used.
-      var credential = error.credential;
+      let credential = error.credential;
       // ...
     });
 //}
