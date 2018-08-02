@@ -2,7 +2,6 @@ initializeFirebase();
 
 // Initialize Cloud Firestore through Firebase
 const db = firebase.firestore();
-
 document.getElementById('signout').addEventListener('click', event => {
   event.preventDefault();
   countMeNetwork.signOut();
@@ -146,7 +145,7 @@ window.wallNetwork = {
         });
       });
   }
-
 };
 wallNetwork.getCurrentUserData();
 wallNetwork.drawPostByUser();
+
