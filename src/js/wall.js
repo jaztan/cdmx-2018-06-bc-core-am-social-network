@@ -148,3 +148,4 @@ window.wallNetwork = {
 };
 wallNetwork.getCurrentUserData();
 wallNetwork.drawPostByUser();
+
