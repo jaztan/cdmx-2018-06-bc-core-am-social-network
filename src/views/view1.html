@@ -30,7 +30,11 @@
           <div class="card border-none">
             <div class="card-body">
               <div class="mt-2">
+<<<<<<< HEAD
                 <img src="http://imagizer.imageshack.us/a/img924/7209/YlDYYA.png" class="mx-auto d-block img-fluid">
+=======
+                <img src="../images/countme_logo.PNG" class="mx-auto d-block img-fluid">
+>>>>>>> upstream/master
               </div>
               <div class="mt-2 text-center">
                 <h3>Regístrate </h3>
@@ -64,6 +68,15 @@
       </div>
     </div>
   </section>
+   <!-- Load Facebook SDK for JavaScript-->
+  <div id="fb-root"></div>
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div>
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+<div id="status">
+</div>
+</body>
+
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

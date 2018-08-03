@@ -1,4 +1,6 @@
+// Función en objeto global para llamar a la función de iniciación de Firebase
 window.initializeFirebase = () => {
+  // Llaves
   firebase.initializeApp({
     apiKey: 'AIzaSyCm7I3cvutJG8L4Sbt7BiK-VQdPdxk3i4Y',
     authDomain: 'count-on-me-476fd.firebaseapp.com',
@@ -9,13 +11,16 @@ window.initializeFirebase = () => {
   });
 };
 
+/* Objeto window para mandar a llamar a las funciones de login en el archivo de paintView y paintIndex */
 window.countMeNetwork = {
-
+ /* Función para registrar a un usuario por medio de su correo y de su email */
   registerNewAccount: (email, password) => {
+    /* Métodos de la consola en firebase para crar al usuario por medio del email y la contraseña*/
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then(result => {
+        /* cuando se cumple la función  ejecuta la función que mando un correo que va a verificar que se registro la cuenta */
         countMeNetwork.verififyAccount();
 
         countMeNetwork.signOut();
@@ -54,7 +59,7 @@ window.countMeNetwork = {
       .auth()
       .signInWithPopup(provider)
       .then(result => {
-        const token = result.credential.accerssToken;
+        const token = result.credential.accessToken;
         const user = result.user;
         location.href = 'views/wall.html';
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -70,7 +75,6 @@ window.countMeNetwork = {
         }
       });
   },
-
 
   verififyAccount: () => {
     let user = firebase.auth().currentUser;
@@ -98,5 +102,3 @@ window.countMeNetwork = {
       });
   }
 };
-
-
