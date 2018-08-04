@@ -1,0 +1,65 @@
+<<<<<<< HEAD
+.bg-light {
+  background-color: #ffc10763!important;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 150, 136, 0.28);
+  border-bottom: 1px solid rgb(0, 150, 136);
+}
+body {
+  background-image: url('https://assets7.domestika.org/project-items/001/815/267/7-big.jpg?1483378985');
+  background-attachment: fixed;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  }
+
+  .card-body{
+    background: chocolate;
+  }
+/* Desde un escritorio*/
+
+@media (min-width: 1200px) {}
+  /* Desde un escritorio pequeño o una tablet*/
+  @media (min-width: 768px) and (max-width: 979px) {}
+  /* Desde Tablet y Smartphone */
+  @media (min-width: 767px) {}
+  /* Smartphone */
+  @media (min-width: 480px) {}
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .elemento-nav .sec {
+      font-size: 20px;
+    }
+    .normal {
+      display: none;
+    }
+    .card-body {
+      height: 100px;
+    }
+    .all-botones {
+      margin-top: -30px;
+    }
+  }
+  @media only screen and (min-width: 600px) {}
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 768px) {
+    .movil {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .titulo-recom {
+      font-size: 15px;
+    }
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 992px) {
+    .movil {
+      display: none;
+    }
+  }
+=======
+>>>>>>> upstream/master

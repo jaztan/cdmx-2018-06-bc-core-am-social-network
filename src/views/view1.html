@@ -11,18 +11,27 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="shortcut icon" href="../images/countme_logo.PNG">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="shortcut icon" href="http://imagizer.imageshack.us/a/img924/7209/YlDYYA.png">
 </head>
+
 <body>
-  <section class="background-image">
+  <header>
+    <br>
+    <nav class="navbar navbar-light bg-light">
+      <img src="http://imagizer.imageshack.us/a/img924/7209/YlDYYA.png" width="50" height="50" class="d-inline-block align-top"
+        alt="">
+      <a class="navbar-brand">CountMe.App</a>
+    </nav>
+  </header>
+  <section>
     <div class="container my-4">
       <div class="row">
         <div class="col-md-6 col-sm-8 mx-auto">
           <div class="card border-none">
             <div class="card-body">
               <div class="mt-2">
-                <img src="../images/countme_logo.PNG" class="mx-auto d-block img-fluid">
+                <img src="http://imagizer.imageshack.us/a/img924/7209/YlDYYA.png" class="mx-auto d-block img-fluid">
               </div>
               <div class="mt-2 text-center">
                 <h3>Regístrate </h3>
@@ -56,15 +65,14 @@
       </div>
     </div>
   </section>
-   <!-- Load Facebook SDK for JavaScript-->
+  <!-- Load Facebook SDK for JavaScript-->
   <div id="fb-root"></div>
-<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div>
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-<div id="status">
-</div>
-</body>
-
+  <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true"
+    data-auto-logout-link="true" data-use-continue-as="true"></div>
+  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+  </fb:login-button>
+  <div id="status">
+  </div>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -73,4 +81,5 @@
   <script src="../js/firebase.js"></script>
   <script src="../js/paintView.js"></script>
 </body>
+
 </html>
