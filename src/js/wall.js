@@ -32,7 +32,7 @@ const getUserData = () => {
   let currentName;
   /* Métodos de firebase  */
   firebase
-  /* Cuando un usuario accede a su cuenta (el usuario activo está configurado)*/
+    /* Cuando un usuario accede a su cuenta (el usuario activo está configurado)*/
     .auth()
     .onAuthStateChanged(user => {
       if (user) {
@@ -98,57 +98,60 @@ const drawPost = () => {
             element.forEach(post => {
               if (currentUserID === post.data().userID) {
                 result +=
-                `<div class="card mb-4 border-secondary">
-                   <div class="card-body">
-                    <p class="card-text" id="${post.id}">${post.data().content}</p>
-                   </div>
-                  <div class="card-header small-font">
-                   <div class="container">
-                    <div class="row">
-                     <div class="col-md-8"><div class="row">
-                      <div class="col-md-2 px-0 px-md-2 col-2">
-                   </div>
+                  ` <div class="card mb-4 border-secondary">
+                  <div class="card-body">
                     <div class="col-10 col-md-10 pl-0">
-                     <strong>${post.data().userName}</strong>
-                       <p>${post.data().time}</p>
-                     </div>
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong>${post.data().userName}</strong>
+                        <p>${post.data().time}</p>
+                      </button>
+                    </div>
+                    <div class="card-header small-font">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <div class="col-md-2 px-0 px-md-2 col-2">
+                            </div>
+                            <div class="col-10 col-md-10 pl-0">
+                                <p class="card-text" id="${post.id}">${post.data().content}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 text-md-right text-center">
+                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="deletePost('${post.id}')">
+                            <i class="far fa-trash-alt"></i> Delete</button>
+                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="createUpdateArea('${post.id}')">
+                            <i class="ml-3 fas fa-pencil-alt"></i> Edit</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                    <div class="col-md-4 text-md-right text-center">
-                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="deletePost('${post.id}')">
-                       <i class="far fa-trash-alt"></i> Delete</button>
-                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="createUpdateArea('${post.id}')">
-                       <i class="ml-3 fas fa-pencil-alt"></i> Edit</button>
-                     </div>
-                   </div>
-                  </div>
-                 </div>
                 </div>`;
               } else {
                 result +=
-                `<div class="card mb-4 border-secondary">
+                  `<div class="card mb-4 border-secondary">
                   <div class="card-body">
-                   <p class="card-text" id="${post.id}">${post.data().content}</p>
+                    <div class="col-10 col-md-10 pl-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong>${post.data().userName}</strong>
+                        <p>${post.data().time}</p>
+                      </button>
+                    </div>
+                    <div class="card-header small-font">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <div class="col-md-2 px-0 px-md-2 col-2">
+                            </div>
+                            <div class="col-10 col-md-10 pl-0">
+                                <p class="card-text" id="${post.id}">${post.data().content}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="card-header small-font">
-                   <div class="container">
-                    <div class="row">
-                     <div class="col-md-8">
-                      <div class="row">
-                      <div class="col-md-2 px-0 px-md-2 col-2">
-                       </div>
-                       <div class="col-10 col-md-10 pl-0">
-                        <strong>${post.data().userName}</strong><p>${post.data().time}</p>
-                </div>
-                  </div>
-                   </div>
-                    <div class="col-md-4 text-md-right text-center">
-                    <button class="no-btn mr-4" <i class="fas fa-thumbs-up"></i></button>
-                   </div>
-                   </div>
-                  </div>
-                 </div>
-              </div>`;
+                </div>`;
               }
             });
             document.getElementById('allList-of-post').innerHTML = result;
@@ -175,10 +178,12 @@ const createUpdateArea = postID => {
   db.collection('post').doc(postID).get()
     .then(post => {
       document.getElementById(postID).innerHTML =
-      `<textarea class="form-control form-textarea" id="post${postID}" rows="4">${post.data().content}</textarea>
-       <div class="ml-auto text-right">
-       <button class="btn btn-warning" onclick="updatePost('${postID}')">
-      <i class="fas fa-save"></i></button><div>`;
+        `<textarea class="form-control form-textarea" id="post${postID}" rows="4">${post.data().content}</textarea>
+  <div class="ml-auto text-center">
+  <button class="btn btn-outline-success my-2 my-sm-0" onclick="updatePost('${postID}')">
+    <i class="fas fa-save"></i> Guardar</button>
+  <div>
+    `;
     }).catch(error => {
       console.log('Error al editar');
     });

@@ -59,11 +59,7 @@ window.countMeNetwork = {
       .auth()
       .signInWithPopup(provider)
       .then(result => {
-<<<<<<< HEAD
         const token = result.credential.accessToken;
-=======
-        const token = result.credential.accerssToken;
->>>>>>> upstream/master
         const user = result.user;
         location.href = 'views/wall.html';
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -105,8 +101,4 @@ window.countMeNetwork = {
         console.log('Error al cerrar sesión', error);
       });
   }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> upstream/master
